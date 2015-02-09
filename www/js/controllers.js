@@ -2,13 +2,17 @@ angular.module('kicker.controllers', [])
 
 .controller('DashCtrl', function($scope) {})
 
+.controller('CreateCtrl', function($scope) {})
+
 .controller('ListsCtrl', function($scope, Lists) {
   $scope.lists = Lists.all();
+  console.log($scope.lists);
   $scope.remove = function(list) {
     Lists.remove(list);
   }
-  alert(1)
 })
+
+.controller('DetailCtrl', function($scope) {})
 
 .controller('ListsDetailCtrl', function($scope, $stateParams, Lists) {
   $scope.list = Lists.get($stateParams.id);

@@ -131,6 +131,15 @@ angular.module('kicker', ['ionic', 'kicker.controllers', 'kicker.services'])
         }
       }
     })
+    .state('tab.create', {
+      url: '/create',
+      views: {
+        'dash': {
+          templateUrl: 'templates/create.html',
+          controller: 'CreateCtrl'
+        }
+      }
+    })
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/lists');
