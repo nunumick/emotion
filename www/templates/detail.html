@@ -1,14 +1,71 @@
-<ion-view view-title="{{list.name}}">
+<ion-view view-title="{{detail.title}}">
   <ion-nav-buttons side="secondary">
   <a class="button button-small button-icon icon ion-ios7-more"></a>
   </ion-nav-buttons>
   <ion-content class="padding">
-    <img ng-src="{{list.face}}" style="width: 64px; height: 64px">
-    <p>
-      {{list.lastText}}
-    </p>
+  <ion-list>
+    <ion-item class="item-divider">
+      活动
+    </ion-item>
+    <ion-item>
+      组织者
+      <span class="item-note">渔隐</span>
+    </ion-item>
+    <ion-item>
+      开始时间
+      <span class="item-note">2015-02-08</span>
+    </ion-item>
+    <ion-item>
+      结束时间
+      <span class="item-note">2015-02-10</span>
+    </ion-item>
+    <ion-item>
+      活动状态
+      <span class="item-note">接受报名中</span>
+    </ion-item>
+    <ion-item class="item-divider">
+      球场
+    </ion-item>
+    <ion-item class="item-avatar">
+      <img src="">
+      <h2>黄龙体育场</h2>
+      <p>黄龙体育场999号第5号球场,111路可直达</p>
+    </ion-item>
+    <ion-item class="item-divider">
+      成员
+    </ion-item>
+    <ion-item>
+      成员下限
+      <span class="item-note">10人</span>
+    </ion-item>
+    <ion-item>
+      成员上限
+      <span class="item-note">20人</span>
+    </ion-item>
+    <ion-item>
+      已报名
+      <span class="item-note">11人</span>
+    </ion-item>
+    <ion-item class="item-divider">
+      费用
+    </ion-item>
+    <ion-item>
+      总价
+      <span class="item-note">500</span>
+    </ion-item>
+    <ion-item>
+      人均
+      <span class="item-note">50</span>
+    </ion-item>
+    <ion-item class="item-divider">
+      备注
+    </ion-item>
+    <ion-item class="item-text-wrap">
+      本活动仅限淘宝同事报名
+    </ion-item>
     <button class="button button-block button-balanced">
       加入
     </button>
+  </ion-list>
   </ion-content>
 </ion-view>
