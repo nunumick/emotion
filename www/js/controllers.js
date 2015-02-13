@@ -7,7 +7,6 @@ angular.module('kicker.controllers', [])
   $scope.remove = function(list) {
     Lists.remove(list);
   }
-  alert(1)
 })
 
 .controller('ListsDetailCtrl', function($scope, $stateParams, Lists) {
