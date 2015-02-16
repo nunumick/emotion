@@ -1,14 +1,26 @@
 angular.module('kicker.controllers', [])
 
-.controller('DashCtrl', function($scope) {})
+.controller('MainCtrl', function($scope, Account) {
+  Account.load();
+})
 
-.controller('CreateCtrl', function($scope) {})
+.controller('DashCtrl', function($scope, Account) {
+})
+
+.controller('CreateCtrl', function($scope, Create, Account, $state) {
+  if(!Account.isLogin()){
+    $state.go('tab.login');
+  }
+})
 
 .controller('ListsCtrl', function($scope, Lists) {
-  $scope.lists = Lists.all();
-  $scope.remove = function(list) {
-    Lists.remove(list);
-  }
+  Lists.getData().then(function(promise){
+    Lists.setData(promise.data.datas);
+    $scope.lists = Lists.all();
+    $scope.remove = function(list) {
+      Lists.remove(list);
+    }
+  })
 })
 
 .controller('DetailCtrl', function($scope) {})
@@ -18,6 +30,40 @@ angular.module('kicker.controllers', [])
 })
 
 .controller('SetupCtrl', function($scope) {})
+
 .controller('ContactCtrl', function($scope) {})
-.controller('LoginCtrl', function($scope) {})
-.controller('RegisterCtrl', function($scope) {})
+
+.controller('LoginCtrl', function($scope,Login,Account) {
+  $scope.formData = {
+    phone : Account.getItem('phone') || '',
+    pw : ''
+  };
+  $scope.login = function(){
+    Login.req($scope.formData).then(function(promise){
+      var data = promise.data;
+      if(data.success){
+        Login.save(promise.data.datas[0]);
+      }else{
+      }
+    })
+  }
+
+})
+
+.controller('RegisterCtrl', function($scope,Register) {
+  $scope.formData = {
+    phone : '',
+    pw : '',
+    pwcheck : ''
+  };
+
+  $scope.register = function(){
+    Register.req($scope.formData).then(function(promise){
+      var data = promise.data;
+      if(data.success){
+        Register.save(promise.data.datas[0]);
+      }else{
+      }
+    })
+  }
+})

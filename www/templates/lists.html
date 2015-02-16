@@ -4,12 +4,12 @@
   </ion-nav-buttons>
   <ion-content>
     <ion-list>
-      <ion-item class="item-remove-animate item-thumbnail-left item-icon-right" ng-repeat="list in lists" type="item-text-wrap" href="#/tab/lists/{{list.id}}">
-        <img ng-src="{{list.face}}">
+      <ion-item class="item-remove-animate item-thumbnail-left item-icon-right" ng-repeat="list in lists" type="item-text-wrap" href="#/tab/lists/{{list.aid}}">
+        <img ng-src="{{list.resource.rpic}}">
         <h2>{{list.name}}</h2>
-        <p>已报:{{list.current}}, 剩余:{{list.top-list.current}}</p>
-        <p>开始时间:{{list.dateStart}}</p>
-        <p>结束时间:{{list.dateEnd}}</p>
+        <p>已报:{{list.csize}}, 剩余:{{list.allsize-list.csize}}</p>
+        <p>开始时间:{{list.start}}</p>
+        <p>结束时间:{{list.end}}</p>
         <i class="icon ion-chevron-right icon-accessory"></i>
         <ion-option-button class="button-assertive" ng-click="remove(list)">
           Delete

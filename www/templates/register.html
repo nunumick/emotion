@@ -2,17 +2,17 @@
   <ion-content class="padding">
     <ion-list>
       <ion-item class="item-input">
-        <input type="text" placeholder="请填写手机号码">
+        <input type="text" ng-model="formData.phone" placeholder="请填写手机号码" required>
       </ion-item>
     </ion-list>
     <ion-list class="padding">
       <ion-item class="item-input">
-        <input type="password" placeholder="请填写密码">
+        <input type="password" ng-model="formData.pw" placeholder="请填写密码">
       </ion-item>
       <ion-item class="item-input">
-        <input type="password" placeholder="请再次填写密码">
+        <input type="password" ng-model="formData.pwcheck" placeholder="请再次填写密码">
       </ion-item>
-      <button class="button button-block button-balanced">
+      <button class="button button-block button-balanced" ng-click="register()">
         注册
       </button>
     </ion-list>

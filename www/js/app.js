@@ -33,7 +33,8 @@ angular.module('kicker', ['ionic', 'kicker.controllers', 'kicker.services'])
     .state('tab', {
     url: "/tab",
     abstract: true,
-    templateUrl: "templates/tabs.html"
+    templateUrl: "templates/tabs.html",
+    controller: 'MainCtrl'
   })
 
   // Each tab has its own nav history stack:

@@ -1,74 +1,114 @@
 angular.module('kicker.services', [])
 
+.factory('Api',function(){
+  var host = 'http://dip.taobao.net/mock/';
+  var apiCfg = [
+    {
+      name:'login',
+      path : '1743'
+    },
+    {
+      name : 'register',
+      path : '1742'
+    },
+    {
+      name : 'create',
+      path : '1744'
+    },
+    {
+      name : 'cancel',
+      path : '1746'
+    },
+    {
+      name : 'lists',
+      path : '1747'
+    },
+    {
+      name : 'detail',
+      path : '1748'
+    },
+    {
+      name : 'apply',
+      path : '1749'
+    },
+    {
+      name : 'cancelApply',
+      path : '1750'
+    },
+    {
+      name : 'kill',
+      path : '1751'
+    },
+    {
+      name : 'resource',
+      path : '1752'
+    }
+  ];
+  var apis = {};
+
+  apiCfg.forEach(function(api,index){
+    apis[api.name] = host + api.path + '?callback=JSON_CALLBACK';
+  })
+
+  console.log(apis)
+
+  return apis;
+
+})
+
 .factory('Account',function(){
+  var datas = {
+    loginStat : false,
+    uid : 0,
+    phone : '',
+    nick : ''
+  };
   return {
     isLogin : function(){
-      return false;
+      return datas.loginStat;
     },
-    login : function(){
+    getItem : function(key){
+      return datas[key] || null;
     },
-    register : function(){
+    setItem : function(key,value){
+      datas[key] = value;
+    },
+    load : function(){
+      datas = JSON.parse(localStorage.getItem('userData')) || datas;
+      console.log(datas);
+    },
+    save : function(){
+      localStorage.setItem('userData',JSON.stringify(datas));
     }
   }
 })
 
-.factory('Lists', function($http) {
-  // Might use a resource here that returns a JSON array
+.factory('Lists', function($http,Api) {
 
-  var url = 'http://10.2.80.206/activity/squareList.do?currentPage=1&callback=JSON_CALLBACK';
+  var lists = [];
 
-  var promise = $http.jsonp(url)
-  .then(function(response){
-    return response.data;
+  var promise = $http.jsonp(Api.lists,{
+    params : {
+      currentPage : 1
+    }
+  }).success(function(data){
+    return data;
+  })
+  .error(function(data){
   })
 
 
-  /*// Some fake testing data
-  var lists = [{
-    id: 0,
-    name: '淘宝城球场约踢',
-    top: 30,
-    current : 15,
-    face: 'https://pbs.twimg.com/profile_images/514549811765211136/9SgAuHeY.png',
-    organizer : '渔隐',
-    dateStart : '2015-02-08 20:30',
-    dateEnd : '2015-02-08 22:30'
-  }, {
-    id: 1,
-    name: '黄龙球场约踢',
-    top: 30,
-    current : 10,
-    face: 'https://pbs.twimg.com/profile_images/491995398135767040/ie2Z_V6e.jpeg'
-  }, {
-    id: 2,
-    name: '淘宝城球场约踢',
-    top: 30,
-    current : 28,
-    face: 'https://pbs.twimg.com/profile_images/491274378181488640/Tti0fFVJ.jpeg',
-    organizer : '渔隐',
-    dateStart : '2015-02-10 14:00',
-    dateEnd : '2015-02-10 16:00'
-  }, {
-    id: 3,
-    name: '黄龙球场约踢',
-    top: 30,
-    current : 30,
-    face: 'https://pbs.twimg.com/profile_images/479090794058379264/84TKj_qa.jpeg'
-  }, {
-    id: 4,
-    name: '黄龙球场约踢',
-    top: 30,
-    current : 10,
-    face: 'https://pbs.twimg.com/profile_images/491995398135767040/ie2Z_V6e.jpeg'
-  }];*/
-
   return {
-    all: function() {
-      promise.then(function(data){
-        return data.datas;
-      });
+    getData : function(){
+      return promise;
     },
-    remove: function(list) {
+    setData : function(datas){
+      lists = datas;
+    },
+    all:function(){
+      return lists;
+    },
+    remove : function(list){
       lists.splice(lists.indexOf(list), 1);
     },
     get: function(listId) {
@@ -80,4 +120,71 @@ angular.module('kicker.services', [])
       return null;
     }
   }
+})
+
+.factory('Login',function($http,Api,Account){
+  return {
+    req : function(data){
+      var promise = $http.jsonp(Api.login, {params:{
+        phoneNum : data.phone || '',
+        passwd : data.pw || ''
+      }})
+      .success(function(data){
+        return data;
+      })
+      return promise;
+    },
+    save : function(data){
+      Account.setItem('uid',data.uid);
+      Account.setItem('loginStat',true);
+      Account.setItem('nick',data.nick || data.phoneNum);
+      Account.setItem('phone',data.phoneNum);
+      Account.save();
+    }
+  }
+})
+
+.factory('Register',function($http,Api,Account){
+  return {
+    req : function(data){
+      var promise = $http.jsonp(Api.register,{
+        params : {
+          phoneNum : data.phone,
+          passwd : data.pw
+        }
+      })
+      .success(function(data){
+        return data;
+      })
+
+      return promise;
+    },
+    save : function(data){
+      Account.setItem('uid',data.uid);
+      Account.setItem('loginStat',true);
+      Account.setItem('nick',data.nick || data.phoneNum);
+      Account.setItem('phone',data.phoneNum);
+      Account.save();
+    }
+  }
+})
+
+.factory('Create',function($http,Api,Account){
+  return{
+  };
+})
+
+.factory('Detail',function(){
+})
+
+.factory('Resource',function(){
+})
+
+.factory('Cancel',function(){
+})
+
+.factory('Apply',function(){
+})
+
+.factory('CancelApply',function(){
 })
