@@ -63,7 +63,7 @@ angular.module('kicker', ['ionic', 'kicker.controllers', 'kicker.services'])
       views: {
         'lists': {
           templateUrl: 'templates/detail.html',
-          controller: 'ListsDetailCtrl'
+          controller: 'DetailCtrl'
         }
       }
     })
@@ -72,7 +72,7 @@ angular.module('kicker', ['ionic', 'kicker.controllers', 'kicker.services'])
       views: {
         'dash': {
           templateUrl: 'templates/detail.html',
-          controller: 'ListsDetailCtrl'
+          controller: 'DetailCtrl'
         }
       }
     })

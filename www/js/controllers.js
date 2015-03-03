@@ -4,7 +4,10 @@ angular.module('kicker.controllers', [])
   Account.load();
 })
 
-.controller('DashCtrl', function($scope, Account) {
+.controller('DashCtrl', function($scope, Account, $state) {
+  if(!Account.isLogin()){
+    $state.go('tab.login');
+  }
 })
 
 .controller('CreateCtrl', function($scope, Create, Account, $state) {
@@ -23,7 +26,22 @@ angular.module('kicker.controllers', [])
   })
 })
 
-.controller('DetailCtrl', function($scope) {})
+.controller('DetailCtrl', function($scope, Detail, Apply, Account) {
+  Detail.getData().then(function(promise){
+    $scope.detail = Detail.setData(promise.data);
+    $scope.join = function(){
+      Apply.confirm($scope.detail.aid,Account.getItem('uid')).then(function(promise){
+        alert(promise.data.msg);
+      });
+    }
+    $scope.quit = function(){
+      Apply.cancel($scope.detail.aid,Account.getItem('uid')).then(function(promise){
+        alert(promise.data.msg);
+      });
+    }
+  })
+
+})
 
 .controller('ListsDetailCtrl', function($scope, $stateParams, Lists) {
   $scope.list = Lists.get($stateParams.id);

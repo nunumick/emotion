@@ -174,7 +174,27 @@ angular.module('kicker.services', [])
   };
 })
 
-.factory('Detail',function(){
+.factory('Detail',function($http,Api){
+  var detail = [];
+  var promise = $http.jsonp(Api.detail,{
+    params : {
+      currentPage : 1
+    }
+  }).success(function(data){
+    return data;
+  })
+  .error(function(data){
+  })
+
+  return {
+    getData : function(){
+      return promise;
+    },
+    setData : function(datas){
+      detail = datas;
+      return detail;
+    }
+  }
 })
 
 .factory('Resource',function(){
@@ -183,8 +203,31 @@ angular.module('kicker.services', [])
 .factory('Cancel',function(){
 })
 
-.factory('Apply',function(){
-})
+.factory('Apply',function($http,Api){
+  var confirmPromise = $http.jsonp(Api.apply,{
+    params : {
+    }
+  }).success(function(data){
+    return data;
+  })
+  .error(function(data){
+  })
 
-.factory('CancelApply',function(){
+  var cancelPromise = $http.jsonp(Api.cancelApply,{
+    params : {
+    }
+  }).success(function(data){
+    return data;
+  })
+  .error(function(data){
+  })
+
+  return {
+    confirm : function(aid,uid){
+      return confirmPromise;
+    },
+    cancel : function(aid,uid){
+      return cancelPromise;
+    }
+  }
 })
