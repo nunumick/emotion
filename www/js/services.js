@@ -65,6 +65,7 @@ angular.module('kicker.services', [])
   };
   return {
     isLogin : function(){
+      console.log(datas)
       return datas.loginStat;
     },
     getItem : function(key){
@@ -75,9 +76,11 @@ angular.module('kicker.services', [])
     },
     load : function(){
       datas = JSON.parse(localStorage.getItem('userData')) || datas;
-      console.log(datas);
     },
-    save : function(){
+    init : function(){
+      this.load();
+    },
+    save : function(data){
       localStorage.setItem('userData',JSON.stringify(datas));
     }
   }

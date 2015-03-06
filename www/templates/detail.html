@@ -63,12 +63,15 @@
     <ion-item class="item-text-wrap">
       本活动仅限淘宝同事报名
     </ion-item>
-    <button class="button button-block button-balanced" ng-click="join({{detail.aid}})">
-      加入
-    </button>
-    <button class="button button-block button-balanced" ng-click="quit({{detail.aid}})">
-      退出
-    </button>
   </ion-list>
   </ion-content>
+  <ion-bar class="bar bar-footer bar-balanced">
+    <a class="h1 title" ng-click="join({{detail.aid}})">
+      加入
+    </a>
+    <a class="h1 title" ng-click="quit({{detail.aid}})">
+      退出
+    </a>
+    </div>
+  </ion-bar>
 </ion-view>

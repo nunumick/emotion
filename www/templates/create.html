@@ -1,7 +1,7 @@
 <ion-view view-title="创建活动">
-  <!--<ion-nav-buttons side="secondary">
-  <a class="button button-small button-icon icon ion-ios7-more"></a>
-  </ion-nav-buttons>-->
+  <ion-nav-buttons>
+    <a class="button button-clear" ng-click="goBack()">取消</a>
+  </ion-nav-buttons>
   <ion-content class="padding">
   <ion-list>
     <ion-item class="item-input item-stacked-label">
@@ -46,10 +46,13 @@
       <span class="input-label">备注</span>
       <input type="text" placeholder="请输入本次活动备注，如活动公告">
     </ion-item>
-      <button class="button button-block button-balanced">
-        创建
-      </button>
   </ion-list>
 
   </ion-content>
+
+  <ion-bar class="bar bar-footer bar-balanced">
+    <a class="h1 title" ng-click="create()">
+      创建
+    </a>
+  </ion-bar>
 </ion-view>

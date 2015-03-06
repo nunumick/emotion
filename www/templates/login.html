@@ -1,4 +1,10 @@
-<ion-view view-title="使用手机号登录">
+<ion-view  view-title="使用手机号登录">
+  <ion-nav-buttons >
+  <a class="button button-clear" ng-click="goBack()">取消</a>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="secondary">
+  <a class="button button-clear " href="#admin/register">注册</a>
+  </ion-nav-buttons>
   <ion-content class="padding">
     <ion-list>
       <ion-item class="item-input">
@@ -14,11 +20,5 @@
         <a style="right">忘记密码？</a>
       </p>
     </ion-list>
-    <ion-list>
-      <a class="button button-small button-light" href="#/tab/register">
-        注册
-      </a>
-    </ion-list>
-
   </ion-content>
 </ion-view>

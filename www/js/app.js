@@ -7,7 +7,7 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('kicker', ['ionic', 'kicker.controllers', 'kicker.services'])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform,$ionicHistory,$rootScope,Account,$state) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -18,7 +18,60 @@ angular.module('kicker', ['ionic', 'kicker.controllers', 'kicker.services'])
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
+
   });
+
+  Account.init();
+
+   var routesThatDontRequireAuth = [
+     '/login',
+     '/register',
+     '/lists'
+   ];
+
+   var routesThatNeedHideNavBar = [
+     '/create',
+     '/detail',
+     '/lists/:id'
+   ]
+
+   var routesThatMustBeHome = [
+   ]
+
+   var routeCheck = function(route,routes){
+     var flag = false;
+     routes.forEach(function(noRoute){
+       var reg = new RegExp('^'+noRoute.replace(/\//g,'\\/'));
+       if(route.match(reg)){
+         flag = true;
+         return false;
+       }
+     })
+     return flag;
+   }
+
+  $rootScope.$on('$stateChangeStart',function(event,next,nextParams,from,fromParams){
+    console.log(next,from,$ionicHistory);
+    if(!routeCheck(next.url,routesThatDontRequireAuth) && !Account.isLogin()){
+      event.preventDefault();
+      $state.go('admin.login');
+    }
+    if(routeCheck(next.url,routesThatNeedHideNavBar)){
+      $rootScope.hideTabs = true;
+    }else{
+      $rootScope.hideTabs = false;
+    }
+    if(from.name == '' && from.url == '^'){
+      $rootScope.from = from.name;
+    }else{
+      $rootScope.from = from.name;
+    }
+
+  })
+})
+
+.config(function($ionicConfigProvider){
+  $ionicConfigProvider.backButton.text('返回');
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
@@ -58,7 +111,7 @@ angular.module('kicker', ['ionic', 'kicker.controllers', 'kicker.services'])
         }
       }
     })
-    .state('tab.detail', {
+    .state('tab.lists-detail', {
       url: '/lists/:id',
       views: {
         'lists': {
@@ -67,8 +120,8 @@ angular.module('kicker', ['ionic', 'kicker.controllers', 'kicker.services'])
         }
       }
     })
-    .state('tab.lists-detail', {
-      url: '/lists/detail/:id',
+    .state('tab.dash-detail', {
+      url: '/detail/:id',
       views: {
         'dash': {
           templateUrl: 'templates/detail.html',
@@ -80,7 +133,7 @@ angular.module('kicker', ['ionic', 'kicker.controllers', 'kicker.services'])
       url: '/lists-join',
       views: {
         'dash': {
-          templateUrl: 'templates/lists-join.html',
+          templateUrl: 'templates/lists.html',
           //controller: 'ListsJoinCtrl'
           controller: 'ListsCtrl'
         }
@@ -90,7 +143,7 @@ angular.module('kicker', ['ionic', 'kicker.controllers', 'kicker.services'])
       url: '/lists-mine',
       views: {
         'dash': {
-          templateUrl: 'templates/lists-mine.html',
+          templateUrl: 'templates/lists.html',
           //controller: 'ListsMineCtrl'
           controller: 'ListsCtrl'
         }
@@ -114,30 +167,37 @@ angular.module('kicker', ['ionic', 'kicker.controllers', 'kicker.services'])
         }
       }
     })
-    .state('tab.register', {
-      url: '/register',
-      views: {
-        'account': {
-          templateUrl: 'templates/register.html',
-          controller: 'RegisterCtrl'
-        }
-      }
-    })
-    .state('tab.login', {
-      url: '/login',
-      views: {
-        'account': {
-          templateUrl: 'templates/login.html',
-          controller: 'LoginCtrl'
-        }
-      }
-    })
     .state('tab.create', {
       url: '/create',
       views: {
         'dash': {
           templateUrl: 'templates/create.html',
           controller: 'CreateCtrl'
+        }
+      }
+    })
+
+    //账号管理
+    .state('admin',{
+      abstract : true,
+      url: '/admin',
+      templateUrl : 'templates/admin.html'
+    })
+    .state('admin.login', {
+      url: '/login',
+      views: {
+        'admin': {
+          templateUrl: 'templates/login.html',
+          controller: 'LoginCtrl'
+        }
+      }
+    })
+    .state('admin.register', {
+      url: '/register',
+      views: {
+        'admin': {
+          templateUrl: 'templates/register.html',
+          controller: 'RegisterCtrl'
         }
       }
     })

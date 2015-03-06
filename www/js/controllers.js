@@ -1,22 +1,28 @@
 angular.module('kicker.controllers', [])
 
 .controller('MainCtrl', function($scope, Account) {
-  Account.load();
 })
 
-.controller('DashCtrl', function($scope, Account, $state) {
-  if(!Account.isLogin()){
-    $state.go('tab.login');
+.controller('DashCtrl', function($rootScope,$scope, Account, $state) {
+  $state.reload();
+})
+
+.controller('CreateCtrl', function($rootScope, $scope, $state, $ionicHistory, Create, Account) {
+  $scope.goBack = function(){
+    if(!$rootScope.name){
+      $state.go('tab.dash');
+    }else{
+      $ionicHistory.goBack();
+    }
   }
 })
 
-.controller('CreateCtrl', function($scope, Create, Account, $state) {
-  if(!Account.isLogin()){
-    $state.go('tab.login');
-  }
-})
+.controller('ListsCtrl', function($scope, Lists, $state) {
 
-.controller('ListsCtrl', function($scope, Lists) {
+  var isListState = $state.is('tab.lists');
+  $scope.title = isListState ? '活动列表' : $state.is('tab.join') ? '我加入的活动' : $state.is('tab.mine') ? '我创建的活动' : '活动';
+  $scope.path = isListState ? 'lists' : 'detail';
+
   Lists.getData().then(function(promise){
     Lists.setData(promise.data.datas);
     $scope.lists = Lists.all();
@@ -24,6 +30,8 @@ angular.module('kicker.controllers', [])
       Lists.remove(list);
     }
   })
+
+  if(isListState) $state.reload();
 })
 
 .controller('DetailCtrl', function($scope, Detail, Apply, Account) {
@@ -51,7 +59,7 @@ angular.module('kicker.controllers', [])
 
 .controller('ContactCtrl', function($scope) {})
 
-.controller('LoginCtrl', function($scope,Login,Account) {
+.controller('LoginCtrl', function($scope,$ionicHistory,Account,Login) {
   $scope.formData = {
     phone : Account.getItem('phone') || '',
     pw : ''
@@ -65,10 +73,13 @@ angular.module('kicker.controllers', [])
       }
     })
   }
+  $scope.goBack = function(){
+    $ionicHistory.goBack();
+  }
 
 })
 
-.controller('RegisterCtrl', function($scope,Register) {
+.controller('RegisterCtrl', function($scope,$ionicHistory,Register) {
   $scope.formData = {
     phone : '',
     pw : '',
@@ -83,5 +94,8 @@ angular.module('kicker.controllers', [])
       }else{
       }
     })
+  }
+  $scope.goBack = function(){
+    $ionicHistory.goBack();
   }
 })
