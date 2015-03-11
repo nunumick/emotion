@@ -1,58 +1,53 @@
 <ion-view view-title="创建活动">
-  <ion-nav-buttons>
-    <a class="button button-clear" ng-click="goBack()">取消</a>
+<ion-nav-buttons>
+    <a class="button button-clear" ng-class="{'hide':!$root.CustomDatas.isFromHome}" ng-click="goBack()">取消</a>
   </ion-nav-buttons>
+  <form name="create_form" ng-submit="create()">
   <ion-content class="padding">
   <ion-list>
     <ion-item class="item-input item-stacked-label">
       <span class="input-label">活动名称</span>
-      <input type="text" placeholder="请输入活动名称">
+      <input type="text" placeholder="请输入活动名称" ng-model="formData.name" required>
+    </ion-item>
+    <ion-item class="item-input item-select">
+      <span class="input-label">活动类型</span>
+      <select ng-model="formData.type" required ng-change="getResources()">
+        <option value="1">足球</option>
+        <option value="2">篮球</option>
+        <option value="3">羽毛球</option>
+        <option value="4">登山</option>
+        <option value="5">自驾游</option>
+        <option value="0">其他</option>
+      </select>
     </ion-item>
     <ion-item class="item-input item-select">
       <span class="input-label">场地</span>
-      <select>
-        <option>淘宝城足球场</option>
-        <option>黄龙体育场</option>
+      <select ng-model="formData.rid" required>
+        <option ng-repeat="list in resourcesLists" value="{{list.rid}}">{{list.rname}}</option>
       </select>
     </ion-item>
     <ion-item class="item-input item-stacked-label">
       <span class="input-label">活动开始时间</span>
-      <input type="date">
+      <input type="date" ng-model="formData.startDate" required>
     </ion-item>
     <ion-item class="item-input item-stacked-label">
       <span class="input-label">活动结束时间</span>
-      <input type="date">
+      <input type="date" ng-model="formData.endDate" required>
     </ion-item>
-    <ion-item class="item-input item-select">
-      <span class="input-label">成员下限</span>
-      <select>
-        <option>0</option>
-        <option>1</option>
-      </select>
-    </ion-item>
-    <ion-item class="item-input item-select">
+    <ion-item class="item-input item-stacked-label">
       <span class="input-label">成员上限</span>
-      <select>
-        <option>不限</option>
-        <option>0</option>
-        <option>1</option>
-      </select>
+      <input type="text" placeholder="请输入活动报名人数上限" ng-model="formData.limit" required>
     </ion-item>
     <ion-item class="item-input item-stacked-label">
       <span class="input-label">活动费用</span>
-      <input type="text" placeholder="请输入本次活动总体费用">
+      <input type="text" placeholder="请输入本次活动总体费用" ng-model="formData.price">
     </ion-item>
     <ion-item class="item-input item-stacked-label">
       <span class="input-label">备注</span>
-      <input type="text" placeholder="请输入本次活动备注，如活动公告">
+      <input type="text" placeholder="请输入本次活动备注，如活动公告" ng-model="formData.bak">
     </ion-item>
   </ion-list>
-
   </ion-content>
-
-  <ion-bar class="bar bar-footer bar-balanced">
-    <a class="h1 title" ng-click="create()">
-      创建
-    </a>
-  </ion-bar>
+  <button  class="bar bar-footer bar-balanced bar-button" type="submit"><b>创建</b</button>
+  </form>
 </ion-view>

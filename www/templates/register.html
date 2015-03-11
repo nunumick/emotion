@@ -3,22 +3,24 @@
   <!--<a class="button button-clear" ng-click="goBack()">取消</a>-->
   <!--</ion-nav-buttons>-->
   <ion-content class="padding">
+    <form name="register_form" ng-submit="register()">
     <ion-list>
       <ion-item class="item-input">
-        <input type="text" ng-model="formData.phone" placeholder="请填写手机号码" required>
+      <input name="phone" type="text" ng-model="formData.phone" placeholder="请填写手机号码" required maxlength="11" minlength="11" ng-pattern="/^1(\d){10}$/">
       </ion-item>
     </ion-list>
     <ion-list class="padding">
       <ion-item class="item-input">
-        <input type="password" ng-model="formData.pw" placeholder="请填写密码">
+        <input name="pw" type="password" ng-model="formData.pw" placeholder="请填写密码" required>
       </ion-item>
       <ion-item class="item-input">
-        <input type="password" ng-model="formData.pwcheck" placeholder="请再次填写密码">
+        <input name="pwcheck" type="password" ng-model="formData.pwcheck" placeholder="请再次填写密码" required>
       </ion-item>
-      <button class="button button-block button-balanced" ng-click="register()">
+      <button type="submit" class="button button-block button-balanced">
         注册
       </button>
     </ion-list>
+    </form>
   </ion-content>
 </ion-view>
 

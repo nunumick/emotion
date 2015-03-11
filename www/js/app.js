@@ -7,7 +7,7 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('kicker', ['ionic', 'kicker.controllers', 'kicker.services'])
 
-.run(function($ionicPlatform,$ionicHistory,$rootScope,Account,$state) {
+.run(function($ionicPlatform,$ionicHistory,$rootScope,$state,UserAccountService) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -21,21 +21,27 @@ angular.module('kicker', ['ionic', 'kicker.controllers', 'kicker.services'])
 
   });
 
-  Account.init();
+  UserAccountService.init();
 
+  //不需要登录验证的场景
    var routesThatDontRequireAuth = [
      '/login',
      '/register',
+     '/members',
      '/lists'
    ];
 
+   //需要隐藏tab的场景
    var routesThatNeedHideNavBar = [
      '/create',
      '/detail',
-     '/lists/:id'
+     '/lists/:id',
+     '/members',
+     '/dash-members'
    ]
 
-   var routesThatMustBeHome = [
+   //需要强制返回首页的场景
+   var routesThatMustGoHome = [
    ]
 
    var routeCheck = function(route,routes){
@@ -50,22 +56,28 @@ angular.module('kicker', ['ionic', 'kicker.controllers', 'kicker.services'])
      return flag;
    }
 
+   $rootScope.CustomDatas = {
+     hideTabs : false,
+     from : '',
+     home : 'tab.lists',
+     dash : 'tab.dash'
+   }
+
   $rootScope.$on('$stateChangeStart',function(event,next,nextParams,from,fromParams){
-    console.log(next,from,$ionicHistory);
-    if(!routeCheck(next.url,routesThatDontRequireAuth) && !Account.isLogin()){
+
+    if(!routeCheck(next.url,routesThatDontRequireAuth) && !UserAccountService.isLogin()){
       event.preventDefault();
       $state.go('admin.login');
     }
+
     if(routeCheck(next.url,routesThatNeedHideNavBar)){
-      $rootScope.hideTabs = true;
+      $rootScope.CustomDatas['hideTabs'] = true;
     }else{
-      $rootScope.hideTabs = false;
+      $rootScope.CustomDatas['hideTabs'] = false;
     }
-    if(from.name == '' && from.url == '^'){
-      $rootScope.from = from.name;
-    }else{
-      $rootScope.from = from.name;
-    }
+
+    $rootScope.CustomDatas['from'] = from.name;
+    $rootScope.CustomDatas['isFromHome'] = from.name == '' || from.name == $rootScope.CustomDatas.home;
 
   })
 })
@@ -86,8 +98,7 @@ angular.module('kicker', ['ionic', 'kicker.controllers', 'kicker.services'])
     .state('tab', {
     url: "/tab",
     abstract: true,
-    templateUrl: "templates/tabs.html",
-    controller: 'MainCtrl'
+    templateUrl: "templates/tabs.html"
   })
 
   // Each tab has its own nav history stack:
@@ -117,6 +128,24 @@ angular.module('kicker', ['ionic', 'kicker.controllers', 'kicker.services'])
         'lists': {
           templateUrl: 'templates/detail.html',
           controller: 'DetailCtrl'
+        }
+      }
+    })
+    .state('tab.members', {
+      url: '/members/:id',
+      views: {
+        'lists': {
+          templateUrl: 'templates/members.html',
+          controller: 'MembersCtrl'
+        }
+      }
+    })
+    .state('tab.dash-members', {
+      url: '/dash-members/:id',
+      views: {
+        'dash': {
+          templateUrl: 'templates/members.html',
+          controller: 'MembersCtrl'
         }
       }
     })

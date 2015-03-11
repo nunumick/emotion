@@ -1,6 +1,6 @@
 <ion-view view-title="{{detail.name}}">
   <ion-nav-buttons side="secondary">
-  <a class="button button-small button-icon icon ion-ios7-more"></a>
+  <a class="button button-small button-icon icon ion-ios7-more" ng-controller="ActionSheet" ng-click="show()"></a>
   </ion-nav-buttons>
   <ion-content class="padding">
   <ion-list>
@@ -35,16 +35,13 @@
       成员
     </ion-item>
     <ion-item>
-      成员下限
-      <span class="item-note">10人</span>
-    </ion-item>
-    <ion-item>
       成员上限
       <span class="item-note">{{detail.allsize}}人</span>
     </ion-item>
-    <ion-item>
+    <ion-item class="item-icon-right" href="#tab/{{path}}/{{detail.aid}}">
       已报名
       <span class="item-note">{{detail.psize}}人</span>
+      <i class="icon ion-chevron-right icon-accessory"></i>
     </ion-item>
     <ion-item class="item-divider">
       费用
@@ -61,16 +58,16 @@
       备注
     </ion-item>
     <ion-item class="item-text-wrap">
-      本活动仅限淘宝同事报名
+      {{detail.bak}}
     </ion-item>
   </ion-list>
   </ion-content>
   <ion-bar class="bar bar-footer bar-balanced">
-    <a class="h1 title" ng-click="join({{detail.aid}})">
-      加入
+    <a class="h1 title" ng-class="{'hide':$root.CustomDatas.from=='tab.join' || detail.signstatus}" ng-click="join({{detail.aid}})">
+      报名
     </a>
-    <a class="h1 title" ng-click="quit({{detail.aid}})">
-      退出
+    <a class="h1 title" ng-class="{'hide':$root.CustomDatas.from!='tab.join' && !detail.signstatus}" ng-click="quit({{detail.aid}})">
+      取消报名
     </a>
     </div>
   </ion-bar>
