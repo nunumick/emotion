@@ -3,13 +3,14 @@
   <a class="button button-small button-icon icon ion-ios7-more" ng-controller="ActionSheet" ng-click="show()"></a>
   </ion-nav-buttons>
   <ion-content class="padding">
+  <ion-refresher on-refresh="refresh()"></ion-refresher>
   <ion-list>
     <ion-item class="item-divider">
       活动
     </ion-item>
     <ion-item>
       组织者
-      <span class="item-note">渔隐</span>
+      <span class="item-note">{{nick}}</span>
     </ion-item>
     <ion-item>
       开始时间
@@ -21,13 +22,13 @@
     </ion-item>
     <ion-item>
       活动状态
-      <span class="item-note">接受报名中</span>
+      <span class="item-note">{{status}}</span>
     </ion-item>
     <ion-item class="item-divider">
-      球场
+      场地
     </ion-item>
     <ion-item class="item-avatar">
-      <img src="">
+      <img src="{{$root.CustomDatas.host}}{{detail.resource.rpic}}">
       <h2>{{detail.resource.rname}}</h2>
       <p>{{detail.resource.add}}</p>
     </ion-item>
@@ -62,13 +63,19 @@
     </ion-item>
   </ion-list>
   </ion-content>
-  <ion-bar class="bar bar-footer bar-balanced">
-    <a class="h1 title" ng-class="{'hide':$root.CustomDatas.from=='tab.join' || detail.signstatus}" ng-click="join({{detail.aid}})">
+  <ion-bar ng-class="{'bar-balanced':detail.actstatus==1}" class="bar bar-footer">
+    <a class="h1 title" ng-show="detail.actstatus == 1 && ($root.CustomDatas.from!='tab.join' && !detail.signstatus)" ng-click="join({{detail.aid}})">
       报名
     </a>
-    <a class="h1 title" ng-class="{'hide':$root.CustomDatas.from!='tab.join' && !detail.signstatus}" ng-click="quit({{detail.aid}})">
+    <a class="h1 title" ng-show="detail.actstatus == 1 && ($root.CustomDatas.from=='tab.join' || detail.signstatus)" ng-click="quit({{detail.signrecordid}})">
       取消报名
     </a>
+    <p class="h1 title" ng-show="detail.actstatus == 2">
+      活动已结束
+    </p>
+    <p class="h1 title" ng-show="detail.actstatus == 3">
+      活动已失效
+    </p>
     </div>
   </ion-bar>
 </ion-view>

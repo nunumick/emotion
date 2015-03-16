@@ -9,7 +9,7 @@
     <ion-list>
     <form name="login_form" ng-submit="login()">
       <ion-item class="item-input">
-      <input ng-model="formData.phone" type="text" placeholder="请填写手机号码" required ng-pattern="/^1(\d){10}$/" minlength="11" maxlength="11">
+      <input ng-model="formData.phone" type="tel" placeholder="请填写手机号码" required ng-pattern="/^1(\d){10}$/" minlength="11" maxlength="11">
       </ion-item>
       <ion-item class="item-input">
         <input ng-model="formData.pw" type="password" placeholder="请填写密码" required>

@@ -23,7 +23,12 @@ angular.module('kicker', ['ionic', 'kicker.controllers', 'kicker.services'])
 
   UserAccountService.init();
 
-  //不需要登录验证的场景
+
+   var debug = false;
+   //开启调试，mock数据
+   //debug = true;
+
+   //不需要登录验证的场景
    var routesThatDontRequireAuth = [
      '/login',
      '/register',
@@ -56,7 +61,10 @@ angular.module('kicker', ['ionic', 'kicker.controllers', 'kicker.services'])
      return flag;
    }
 
+
    $rootScope.CustomDatas = {
+     debug : debug,
+     host : debug ? '' : 'http://121.40.28.70/prototype',
      hideTabs : false,
      from : '',
      home : 'tab.lists',

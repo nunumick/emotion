@@ -6,7 +6,7 @@
     <form name="register_form" ng-submit="register()">
     <ion-list>
       <ion-item class="item-input">
-      <input name="phone" type="text" ng-model="formData.phone" placeholder="请填写手机号码" required maxlength="11" minlength="11" ng-pattern="/^1(\d){10}$/">
+      <input name="phone" type="tel" ng-model="formData.phone" placeholder="请填写手机号码" required maxlength="11" minlength="11" ng-pattern="/^1(\d){10}$/">
       </ion-item>
     </ion-list>
     <ion-list class="padding">

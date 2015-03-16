@@ -3,9 +3,9 @@
     <a class="button button-clear" ng-class="{'hide':!$root.CustomDatas.isFromHome}" ng-click="goBack()">取消</a>
   </ion-nav-buttons>
   <form name="create_form" ng-submit="create()">
-  <ion-content class="padding">
+  <ion-content class="padding-top">
   <ion-list>
-    <ion-item class="item-input item-stacked-label">
+    <ion-item class="item-input">
       <span class="input-label">活动名称</span>
       <input type="text" placeholder="请输入活动名称" ng-model="formData.name" required>
     </ion-item>
@@ -26,23 +26,23 @@
         <option ng-repeat="list in resourcesLists" value="{{list.rid}}">{{list.rname}}</option>
       </select>
     </ion-item>
-    <ion-item class="item-input item-stacked-label">
+    <ion-item class="item-input">
       <span class="input-label">活动开始时间</span>
-      <input type="date" ng-model="formData.startDate" required>
+      <input type="datetime-local" ng-model="formData.startDate" required>
     </ion-item>
-    <ion-item class="item-input item-stacked-label">
+    <ion-item class="item-input">
       <span class="input-label">活动结束时间</span>
-      <input type="date" ng-model="formData.endDate" required>
+      <input type="datetime-local" ng-model="formData.endDate" required>
     </ion-item>
-    <ion-item class="item-input item-stacked-label">
+    <ion-item class="item-input">
       <span class="input-label">成员上限</span>
-      <input type="text" placeholder="请输入活动报名人数上限" ng-model="formData.limit" required>
+      <input type="text" placeholder="请输入活动报名人数上限" ng-model="formData.limit" required ng-pattern="/^\d*$/">
     </ion-item>
-    <ion-item class="item-input item-stacked-label">
+    <ion-item class="item-input">
       <span class="input-label">活动费用</span>
-      <input type="text" placeholder="请输入本次活动总体费用" ng-model="formData.price">
+      <input type="text" placeholder="请输入本次活动总体费用" ng-model="formData.price" ng-pattern="/^[\d\.]*$/">
     </ion-item>
-    <ion-item class="item-input item-stacked-label">
+    <ion-item class="item-input">
       <span class="input-label">备注</span>
       <input type="text" placeholder="请输入本次活动备注，如活动公告" ng-model="formData.bak">
     </ion-item>
