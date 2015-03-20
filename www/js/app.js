@@ -32,32 +32,53 @@ angular.module('kicker', ['ionic', 'kicker.controllers', 'kicker.services'])
    var routesThatDontRequireAuth = [
      '/login',
      '/register',
-     '/members',
-     '/lists'
+     '/members/:id',
+     '/lists',
+     '/lists/:id'
    ];
 
    //需要隐藏tab的场景
    var routesThatNeedHideNavBar = [
      '/create',
-     '/detail',
+     '/detail/:id',
      '/lists/:id',
-     '/members',
-     '/dash-members'
+     '/members/:id',
+     '/dash-members/:id'
    ]
 
-   //需要强制返回首页的场景
-   var routesThatMustGoHome = [
+   //在Tab1-lists的场景
+   var routesThatInLists = [
+     '/lists',
+     '/lists/:id',
+     '/members/:id'
+   ]
+
+   //在Tab2-dash的场景
+   var routesThatInDash = [
+     '/create',
+     '/dash-members/:id',
+     '/detail/:id',
+     '/setup',
+     '/contact',
+     '/lists-mine',
+     '/lists-join'
+   ]
+
+   var routesThatInAdmin = [
+     '/login',
+     '/register'
    ]
 
    var routeCheck = function(route,routes){
      var flag = false;
      routes.forEach(function(noRoute){
-       var reg = new RegExp('^'+noRoute.replace(/\//g,'\\/'));
+       var reg = new RegExp('^'+noRoute.replace(/\//g,'\\/')+'$');
        if(route.match(reg)){
          flag = true;
          return false;
        }
      })
+     //console.log(flag,route,routes);
      return flag;
    }
 
@@ -71,27 +92,54 @@ angular.module('kicker', ['ionic', 'kicker.controllers', 'kicker.services'])
      dash : 'tab.dash'
    }
 
+  //在切换前
   $rootScope.$on('$stateChangeStart',function(event,next,nextParams,from,fromParams){
 
+    //登录验证
     if(!routeCheck(next.url,routesThatDontRequireAuth) && !UserAccountService.isLogin()){
       event.preventDefault();
       $state.go('admin.login');
+      return;
     }
 
+    //隐藏tab
     if(routeCheck(next.url,routesThatNeedHideNavBar)){
       $rootScope.CustomDatas['hideTabs'] = true;
     }else{
       $rootScope.CustomDatas['hideTabs'] = false;
     }
 
-    $rootScope.CustomDatas['from'] = from.name;
+    //显示取消按钮
+    //仅在两个不同tab间切换或刷新页面导致历史丢失时
+    if(from.name){
+      var fromInListNextInDash = routeCheck(from.url,routesThatInLists) && routeCheck(next.url,routesThatInDash);
+      var fromInDashNextInList = routeCheck(from.url,routesThatInDash) && routeCheck(next.url,routesThatInLists);
+      var fromNotInAdminNextInAdmin = routeCheck(next.url,routesThatInAdmin)/* && !routeCheck(from.url,routesThatInAdmin)*/;
+    }
+
+    if(!from.name || fromInListNextInDash || fromInDashNextInList || fromNotInAdminNextInAdmin){
+      $rootScope.CustomDatas['showBackAction'] = true;
+    }else{
+      $rootScope.CustomDatas['showBackAction'] = false;
+    }
+
+    $rootScope.CustomDatas['from'] = from;
+    $rootScope.CustomDatas['fromParams'] = fromParams;
     $rootScope.CustomDatas['isFromHome'] = from.name == '' || from.name == $rootScope.CustomDatas.home;
 
   })
 })
 
+//一些个性化配置
 .config(function($ionicConfigProvider){
+  //返回按钮中文化
   $ionicConfigProvider.backButton.text('返回');
+  //统一安卓和ios的表现
+  $ionicConfigProvider.tabs.position('bottom');
+  $ionicConfigProvider.tabs.style('standard');
+  $ionicConfigProvider.navBar.alignTitle('center');
+  $ionicConfigProvider.navBar.positionPrimaryButtons('left');
+  $ionicConfigProvider.navBar.positionSecondaryButtons('right');
 })
 
 .config(function($stateProvider, $urlRouterProvider) {

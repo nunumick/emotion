@@ -47,6 +47,10 @@ angular.module('kicker.services', [])
     {
       name : 'members',
       path : '1888'
+    },
+    {
+      name : 'userinfo',
+      path : '2000'
     }
   ];
 
@@ -94,6 +98,14 @@ angular.module('kicker.services', [])
     {
       name : 'members',
       path : 'activityApply/applyRecord.do'
+    },
+    {
+      name : 'updateuserinfo',
+      path : 'user/updateUserInfo.do'
+    },
+    {
+      name : 'getuserinfo',
+      path : 'user/getUserInfo.do'
     }
   ];
   var apis = {};
@@ -125,6 +137,7 @@ angular.module('kicker.services', [])
     loginStat : false,//登录状态
     uid : 0,//用户id
     nick : '',//用户昵称
+    alipay : '',//支付宝
     token:''
   };
   return {
@@ -134,8 +147,18 @@ angular.module('kicker.services', [])
     getItem : function(key){
       return datas[key] || null;
     },
+    getItems : function(){
+      return datas;
+    },
     setItem : function(key,value){
       datas[key] = value || '';
+    },
+    setItems : function(data){
+      for(var p in data){
+        if(data.hasOwnProperty(p)){
+          datas[p] = data[p] || '';
+        }
+      }
     },
     load : function(){
       datas = JSON.parse(localStorage.getItem('userData')) || datas;
@@ -144,12 +167,16 @@ angular.module('kicker.services', [])
       this.load();
     },
     save : function(data){
+      if(data){
+        this.setItems(data);
+      }
       localStorage.setItem('userData',JSON.stringify(datas));
     },
     clear : function(){
       this.setItem('loginStat',false);
       this.setItem('uid',0);
       this.setItem('nick','');
+      this.setItem('alipay','');
       this.save();
     }
   }
@@ -325,10 +352,11 @@ angular.module('kicker.services', [])
       return ApiService.serve(serveName,params);
     },
     save : function(data){
-      UserAccountService.setItem('uid',data.uid);
-      UserAccountService.setItem('loginStat',true);
-      UserAccountService.setItem('nick',data.nick || '匿名');
-      UserAccountService.save();
+      UserAccountService.save({
+        uid : data.uid || 0,
+        loginStat : true,
+        nick : data.nick || ''
+      });
     }
   }
 })
@@ -342,10 +370,35 @@ angular.module('kicker.services', [])
       return ApiService.serve(serveName,params);
     },
     save : function(data){
-      UserAccountService.setItem('uid',data.uid);
-      UserAccountService.setItem('loginStat',true);
-      UserAccountService.setItem('nick',data.nick || '匿名');
-      UserAccountService.save();
+      UserAccountService.save({
+        uid : data.uid || 0,
+        loginStat : true,
+        nick : data.nick || ''
+      });
+    }
+  }
+})
+
+//补充个人信息
+.factory('UserInfoService',function(ApiService,UserAccountService){
+  var updateServeName = ApiService.updateuserinfo;
+  var getServeName = ApiService.getuserinfo;
+
+  return {
+    serve : function(serveName,params){
+      return ApiService.serve(serveName,params);
+    },
+    get : function(params){
+      return this.serve(getServeName,params);
+    },
+    update : function(params){
+      return this.serve(updateServeName,params);
+    },
+    save : function(data){
+      UserAccountService.save({
+        nick : data.nick || '',
+        alipay : data.alipay || ''
+      });
     }
   }
 })

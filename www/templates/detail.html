@@ -1,4 +1,4 @@
-<ion-view view-title="{{detail.name}}">
+<ion-view view-title="{{detail.name}}" cache-view="false">
   <ion-nav-buttons side="secondary">
   <a class="button button-small button-icon icon ion-ios7-more" ng-controller="ActionSheet" ng-click="show()"></a>
   </ion-nav-buttons>
@@ -51,10 +51,10 @@
       总价
       <span class="item-note">{{detail.price}}</span>
     </ion-item>
-    <ion-item>
-      人均
-      <span class="item-note">{{detail.price/detail.psize}}</span>
-    </ion-item>
+    <!--<ion-item>-->
+      <!--人均-->
+      <!--<span class="item-note">{{detail.price/detail.psize}}</span>-->
+    <!--</ion-item>-->
     <ion-item class="item-divider">
       备注
     </ion-item>

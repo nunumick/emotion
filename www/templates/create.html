@@ -1,53 +1,55 @@
-<ion-view view-title="创建活动">
-<ion-nav-buttons>
-    <a class="button button-clear" ng-class="{'hide':!$root.CustomDatas.isFromHome}" ng-click="goBack()">取消</a>
-  </ion-nav-buttons>
+<ion-modal-view>
   <form name="create_form" ng-submit="create()">
-  <ion-content class="padding-top">
-  <ion-list>
-    <ion-item class="item-input">
-      <span class="input-label">活动名称</span>
-      <input type="text" placeholder="请输入活动名称" ng-model="formData.name" required>
-    </ion-item>
-    <ion-item class="item-input item-select">
-      <span class="input-label">活动类型</span>
-      <select ng-model="formData.type" required ng-change="getResources()">
-        <option value="1">足球</option>
-        <option value="2">篮球</option>
-        <option value="3">羽毛球</option>
-        <option value="4">登山</option>
-        <option value="5">自驾游</option>
-        <option value="0">其他</option>
-      </select>
-    </ion-item>
-    <ion-item class="item-input item-select">
-      <span class="input-label">场地</span>
-      <select ng-model="formData.rid" required>
-        <option ng-repeat="list in resourcesLists" value="{{list.rid}}">{{list.rname}}</option>
-      </select>
-    </ion-item>
-    <ion-item class="item-input">
-      <span class="input-label">活动开始时间</span>
-      <input type="datetime-local" ng-model="formData.startDate" required>
-    </ion-item>
-    <ion-item class="item-input">
-      <span class="input-label">活动结束时间</span>
-      <input type="datetime-local" ng-model="formData.endDate" required>
-    </ion-item>
-    <ion-item class="item-input">
-      <span class="input-label">成员上限</span>
-      <input type="text" placeholder="请输入活动报名人数上限" ng-model="formData.limit" required ng-pattern="/^\d*$/">
-    </ion-item>
-    <ion-item class="item-input">
-      <span class="input-label">活动费用</span>
-      <input type="text" placeholder="请输入本次活动总体费用" ng-model="formData.price" ng-pattern="/^[\d\.]*$/">
-    </ion-item>
-    <ion-item class="item-input">
-      <span class="input-label">备注</span>
-      <input type="text" placeholder="请输入本次活动备注，如活动公告" ng-model="formData.bak">
-    </ion-item>
-  </ion-list>
+  <ion-header-bar class="bar-positive">
+    <button class="button button-clear" type="button" ng-click="hide()">取消</button>
+    <h1 class="title">创建活动</h1>
+    <button class="button button-clear" type="submit" side="secondary">创建</button>
+  </ion-header-bar>
+  <ion-content>
+    <ion-list class="padding">
+      <ion-item class="item-input">
+        <span class="input-label">活动名称</span>
+        <input type="text" placeholder="请输入活动名称" ng-model="formData.name" required>
+      </ion-item>
+      <ion-item class="item-input item-select">
+        <span class="input-label">活动类型</span>
+        <select ng-model="formData.type" required ng-change="getResources()">
+          <option value="1">足球</option>
+          <option value="2">篮球</option>
+          <option value="3">羽毛球</option>
+          <option value="4">登山</option>
+          <option value="5">自驾游</option>
+          <option value="0">其他</option>
+        </select>
+      </ion-item>
+      <ion-item class="item-input item-select">
+        <span class="input-label">场地</span>
+        <select ng-model="formData.rid" required>
+          <option ng-repeat="list in resourcesLists" value="{{list.rid}}">{{list.rname}}</option>
+        </select>
+      </ion-item>
+      <ion-item class="item-input">
+        <span class="input-label">活动开始时间</span>
+        <input type="datetime-local" ng-model="formData.startDate" required>
+      </ion-item>
+      <ion-item class="item-input">
+        <span class="input-label">活动结束时间</span>
+        <input type="datetime-local" ng-model="formData.endDate" required>
+      </ion-item>
+      <ion-item class="item-input">
+        <span class="input-label">成员上限</span>
+        <input type="text" placeholder="请输入活动报名人数上限" ng-model="formData.limit" required ng-pattern="/^\d*$/">
+      </ion-item>
+      <ion-item class="item-input">
+        <span class="input-label">活动费用</span>
+        <input type="text" placeholder="请输入本次活动总体费用" ng-model="formData.price" ng-pattern="/^[\d\.]*$/">
+      </ion-item>
+      <ion-item class="item-input">
+        <span class="input-label">备注</span>
+        <input type="text" placeholder="请输入本次活动备注，如活动公告" ng-model="formData.bak">
+      </ion-item>
+    </ion-list>
   </ion-content>
-  <button  class="bar bar-footer bar-balanced bar-button" type="submit"><b>创建</b</button>
+  <button  class="bar bar-footer bar-balanced bar-button" type="submit"><b>创建</b></button>
   </form>
-</ion-view>
+</ion-modal-view>

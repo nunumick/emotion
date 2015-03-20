@@ -34,7 +34,7 @@ angular.module('kicker.controllers', [])
     };
 
 
-  if($rootScope.CustomDatas.from == 'tab.mine'){
+  if($rootScope.CustomDatas.from.name == 'tab.mine'){
     buttons.destructiveText = '取消活动';
     buttons.destructiveButtonClicked = function(){
       ActivityRemoveService.remove()($state.params.id,function(){
@@ -50,12 +50,12 @@ angular.module('kicker.controllers', [])
 
 })
 
-.controller('ListsCtrl', function($scope, $state, ActivityListsService, UserAccountService, ActivityRemoveService) {
+.controller('ListsCtrl', function($rootScope, $scope, $state, ActivityListsService, UserAccountService, ActivityRemoveService) {
 
   var type = null;
   var remove = ActivityRemoveService.remove();
 
-  $scope.title = '活动列表';
+  $scope.title = '所有活动';
   $scope.path = 'detail';
   $scope.del = false;
 
@@ -109,6 +109,12 @@ angular.module('kicker.controllers', [])
     '活动已失效'
   ]
 
+  function toISOString(time){
+    var date = new Date(time + 8*60*60*1000);
+    var str = date.toISOString();
+    return str.replace(/T/,' ').replace(/\.\w*$/,'');
+  }
+
   function fetch(){
     ActivityDetailService.serve({
       aid : $state.params.id,
@@ -118,6 +124,8 @@ angular.module('kicker.controllers', [])
       $scope.detail = ActivityDetailService.setData(promise.data.datas);
       $scope.status = status[$scope.detail.actstatus-1];
       $scope.nick = $scope.detail.usercreate.nick || '匿名用户';
+      //$scope.startDate = toISOString($scope.detail.stime);
+      //$scope.endDate = toISOString($scope.detail.etime);
     })
     .finally(function(){
       $scope.$broadcast('scroll.refreshComplete');
@@ -129,6 +137,18 @@ angular.module('kicker.controllers', [])
       $state.go('admin.login');
       return;
     }
+    if(!UserAccountService.getItem('nick')){
+      $ionicPopup.confirm({
+        title : '提示',
+        template : '请先补充个人信息'
+      })
+      .then(function(res){
+        if(res){
+          $state.go('tab.setup');
+        }
+      })
+      return;
+    }
     ActivityApplyService.confirm({
       'aid' : $scope.detail.aid,
       'uid' : UserAccountService.getItem('uid')
@@ -138,10 +158,10 @@ angular.module('kicker.controllers', [])
       if(data.success){
         $ionicPopup.alert({
           title : '报名成功',
-          template : '快进入我加入的活动列表看看吧',
+          template : '去我加入的活动列表看看？',
           buttons : [
             {
-            text : 'OK',
+            text : '好',
             type: 'button-positive',
             onTap : function(){
               $state.go('tab.join');
@@ -290,7 +310,7 @@ angular.module('kicker.controllers', [])
 
 })
 
-.controller('CreateCtrl', function($ionicPopover,$rootScope, $scope, $state, $ionicHistory, $ionicPopup, UserAccountService, ActivityCreateService, ActivityResourceService) {
+.controller('CreateCtrl', function($rootScope, $scope, $state, $ionicHistory, $ionicModal, $ionicPopup, UserAccountService, ActivityCreateService, ActivityResourceService) {
 
   var formData = $scope.formData = {
     name : '',
@@ -303,6 +323,29 @@ angular.module('kicker.controllers', [])
     bak : '',
     type : ''
   };
+
+  $ionicModal.fromTemplateUrl('templates/create.html', {
+    scope: $scope,
+    animation: 'slide-in-up'
+  }).then(function(modal) {
+    $scope.modal = modal;
+  });
+
+  $scope.$on('$destroy', function() {
+    $scope.modal.remove();
+  });
+
+  $scope.show = function(){
+    if(!UserAccountService.isLogin()){
+      $state.go('admin.login');
+      return;
+    }
+    $scope.modal.show();
+  }
+
+  $scope.hide = function(){
+    $scope.modal.hide();
+  }
 
   //获取资源列表
   $scope.getResources = function(){
@@ -323,12 +366,12 @@ angular.module('kicker.controllers', [])
   $scope.create = function(){
     ActivityCreateService.serve({
       uid : formData.uid,
-      name : encodeURI(encodeURI(formData.name)),
+      name : encodeURI(formData.name),
       startDate : setTimeZone(formData.startDate),
       endDate : setTimeZone(formData.endDate),
       price : formData.price || 0,
       limit : formData.limit || 0,
-      bak : encodeURI(encodeURI(formData.bak || '')),
+      bak : encodeURI(formData.bak || ''),
       type : formData.type || 1,
       rid : formData.rid
     })
@@ -337,10 +380,10 @@ angular.module('kicker.controllers', [])
       if(data.success){
         $ionicPopup.alert({
           title : '创建成功',
-          template : promise.data.msg,
+          template : '去我创建的活动看看？',
           buttons : [
             {
-              text : '知道了',
+              text : '好',
               type: 'button-positive',
               onTap : function(){
                 $state.go('tab.mine');
@@ -351,7 +394,6 @@ angular.module('kicker.controllers', [])
               text : '继续创建',
               type: 'button-positive',
               onTap : function(){
-                $state.go('tab.create');
                 return true;
               }
             }
@@ -375,22 +417,49 @@ angular.module('kicker.controllers', [])
     })
   }
 
-  $scope.goBack = function(){
-    if(!$rootScope.name){
-      $state.go('tab.lists');
-    }else{
-      $ionicHistory.goBack();
-    }
-  }
-
 })
 
-.controller('SetupCtrl', function($scope, $state, UserAccountService) {
+.controller('SetupCtrl', function($rootScope, $scope, $state, UserAccountService, UserInfoService) {
 
   $scope.logout = function(){
     UserAccountService.clear();
     $state.go('tab.lists');
   }
+
+  function userinfoInit(){
+    var nick = UserAccountService.getItem('nick') || '';
+    var alipay = UserAccountService.getItem('alipay') || '';
+
+    if(!(nick && alipay)){
+      UserInfoService.get({
+        uid : UserAccountService.getItem('uid') || 0
+      })
+      .then(function(promise){
+        var data = promise.data;
+        if(data.success){
+          $scope.nick = data.datas.nick || '未设置';
+          $scope.alipay = data.datas.alipay || '未设置';
+          UserAccountService.save({
+            nick : data.datas.nick || '',
+            alipay : data.datas.alipay || ''
+          });
+        }else{
+          $scope.nick = nick || '未设置';
+          $scope.alipay = alipay || '未设置';
+        }
+      })
+    }else{
+      $scope.nick = nick || '未设置';
+      $scope.alipay = alipay || '未设置';
+    }
+
+  }
+
+  $scope.$on('userinfoupdate',function(){
+    userinfoInit();
+  })
+
+  userinfoInit();
 
 })
 
@@ -409,14 +478,14 @@ angular.module('kicker.controllers', [])
     return (!!phone);
   }
 
-  function popup(title,msg,fn){
+  function popup(title,msg,text,fn){
     $ionicPopup.alert(
       {
         title : title,
         template : msg,
         buttons : [
           {
-            text : '知道了',
+            text : text || '知道了',
             type: 'button-positive',
             onTap : function(){
               fn&&fn();
@@ -436,9 +505,11 @@ angular.module('kicker.controllers', [])
     }).then(function(promise){
       var data = promise.data;
       if(data.success){
-        popup('登录成功','欢迎您：' + (data.datas.nick || '匿名用户'),function(){
+        popup('登录成功','欢迎您：' + (data.datas.nick || '匿名用户'),'好',function(){
           LoginService.save(data.datas);
-          $state.go($rootScope.CustomDatas.from || $rootScope.CustomDatas.dash);
+          var from = $rootScope.CustomDatas.from.name;
+          from = from == 'admin.register' ? $rootScope.CustomDatas.dash : from;
+          $state.go(from || $rootScope.CustomDatas.dash, $rootScope.CustomDatas.fromParams || null);
         });
       }else{
         popup('出错啦',data.msg);
@@ -456,6 +527,7 @@ angular.module('kicker.controllers', [])
 
 })
 
+//注册控制器
 .controller('RegisterCtrl', function($scope,$state,$ionicHistory,$ionicPopup,RegisterService) {
   $scope.formData = {
     phone : '',
@@ -477,14 +549,14 @@ angular.module('kicker.controllers', [])
     return !!(pw&&pw===pwcheck);
   }
 
-  function popup(title,msg,fn){
+  function popup(title,msg,text,fn){
     $ionicPopup.alert(
       {
         title : title,
         template : msg,
         buttons : [
           {
-            text : '知道了',
+            text : text || '知道了',
             type: 'button-positive',
             onTap : function(){
               fn&&fn();
@@ -504,9 +576,9 @@ angular.module('kicker.controllers', [])
     }).then(function(promise){
       var data = promise.data;
       if(data.success){
-        popup('注册成功','感谢您的支持，现在返回首页',function(){
+        popup('注册成功','感谢您的支持，请补充个人信息','好',function(){
           RegisterService.save(promise.data.datas);
-          $state.go('tab.lists');
+          $state.go('tab.setup');
         })
       }else{
         popup('出错啦',promise.data.msg);
@@ -518,4 +590,61 @@ angular.module('kicker.controllers', [])
     $ionicHistory.goBack();
   }
 
+})
+.controller('SetUserInfo',function($scope, $ionicModal, UserInfoService, UserAccountService){
+
+  $scope.formData = {
+    nick : UserAccountService.getItem('nick') || '',
+    alipay : UserAccountService.getItem('alipay') || ''
+  };
+
+  $ionicModal.fromTemplateUrl('templates/setuserinfo.html', {
+    scope: $scope,
+    animation: 'slide-in-up'
+  }).then(function(modal) {
+    $scope.modal = modal;
+  });
+
+  $scope.$on('$destroy', function() {
+    $scope.modal.remove();
+  });
+
+  $scope.open = function(){
+    $scope.modal.show();
+  }
+
+  $scope.close = function(){
+    $scope.modal.hide();
+  }
+
+  $scope.setinfo = function(){
+    UserInfoService.update({
+      uid : UserAccountService.getItem('uid') || 0,
+      nick : encodeURI($scope.formData.nick),
+      alipay : $scope.formData.alipay
+    })
+    .then(function(promise){
+      var data = promise.data;
+      if(data.success){
+        UserInfoService.save($scope.formData);
+        $scope.modal.hide();
+        $scope.$emit('userinfoupdate');
+      }
+    })
+  }
+
+})
+
+.controller('BackAction',function($rootScope, $scope, $state, $ionicHistory){
+    $scope.goBack = function(){
+      if($rootScope.CustomDatas.isFromHome || $rootScope.CustomDatas.from.name == 'admin.register'){
+        $state.go($rootScope.CustomDatas.home);
+      }else{
+        if($ionicHistory.backView()){
+          $ionicHistory.goBack();
+        }else{
+          $state.go($rootScope.CustomDatas.from.name,$rootScope.CustomDatas.fromParams);
+        }
+      }
+    }
 })

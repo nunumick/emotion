@@ -1,6 +1,21 @@
-<ion-view view-title="设置">
+<ion-view view-title="设置" cache-view="false">
+  <ion-nav-buttons >
+  <a class="button button-clear" ng-show="$root.CustomDatas.showBackAction" ng-click="goBack()" ng-controller="BackAction">取消</a>
+  </ion-nav-buttons>
   <ion-content>
-    <ion-list>
+    <ion-list ng-controller="SetUserInfo" class="padding" ng-click="open()">
+      <ion-item class="item-icon-right">
+        昵称
+        <span class="item-note">{{nick}}</span>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+      <ion-item class="item-icon-right">
+        支付宝账号
+        <span class="item-note">{{alipay}}</span>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+    <ion-list class="padding">
       <button type="button" class="button button-block button-balanced" ng-click="logout()">
         退出登录
       </button>

@@ -1,6 +1,6 @@
 <ion-view  view-title="使用手机号登录">
   <ion-nav-buttons >
-  <a class="button button-clear" ng-click="goBack()">取消</a>
+  <a class="button button-clear" ng-show="$root.CustomDatas.showBackAction" ng-click="goBack()" ng-controller="BackAction">取消</a>
   </ion-nav-buttons>
   <ion-nav-buttons side="secondary">
   <a class="button button-clear " href="#admin/register">注册</a>
