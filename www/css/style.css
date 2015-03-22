@@ -8,3 +8,9 @@
   font-size:17px;
   display:block;
 }
+.notice-bar-box{
+  margin:-10px -10px 5px -10px;
+}
+.notice-bar{
+  background-color:pink;
+}

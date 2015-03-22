@@ -17,6 +17,7 @@ angular.module('kicker', ['ionic', 'kicker.controllers', 'kicker.services'])
     if (window.StatusBar) {
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
+      //$rootScope.netType = navigator.connection.type;
     }
 
   });
@@ -128,6 +129,14 @@ angular.module('kicker', ['ionic', 'kicker.controllers', 'kicker.services'])
     $rootScope.CustomDatas['isFromHome'] = from.name == '' || from.name == $rootScope.CustomDatas.home;
 
   })
+
+  /*$rootScope.$on('$cordovaNetwork:online',function(event, netWorkState){
+    $rootScope.CustomDatas.offline = false;
+  })
+  $rootScope.$on('$cordovaNetwork:offline',function(event, netWorkState){
+    $rootScope.CustomDatas.offline = true;
+  })*/
+
 })
 
 //一些个性化配置

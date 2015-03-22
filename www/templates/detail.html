@@ -4,6 +4,12 @@
   </ion-nav-buttons>
   <ion-content class="padding">
   <ion-refresher on-refresh="refresh()"></ion-refresher>
+  <div class="notice-bar-box">
+    <ion-item class="notice-bar dark item-icon-left" ng-show="$root.CustomDatas.offline">
+       <i class="icon ion-alert-circled assertive"></i>
+      网络连接失败，请检查你的网络设置
+    </ion-item>
+  </div>
   <ion-list>
     <ion-item class="item-divider">
       活动

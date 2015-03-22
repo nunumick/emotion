@@ -3,8 +3,13 @@
   <a class="button button-small button-icon icon ion-ios7-plus-empty" ng-controller="CreateCtrl" ng-click="show()"></a>
   </ion-nav-buttons>
   <ion-content>
+  <noticebox></noticebox>
     <ion-refresher on-refresh="refresh()"></ion-refresher>
     <ion-list>
+    <ion-item class="notice-bar dark item-icon-left" ng-show="$root.CustomDatas.offline">
+       <i class="icon ion-alert-circled assertive"></i>
+      网络连接失败，请检查你的网络设置
+    </ion-item>
     <ion-item ng-class="{'item-remove-animate':del}" class="item-thumbnail-left item-icon-right" ng-repeat="list in lists" type="item-text-wrap" href="#/tab/{{path}}/{{list.aid}}">
     <img ng-src="{{$root.CustomDatas.host}}{{list.resource.rpic}}">
     <h2 class="positive" ng-class="{'energized':list.actstatus==2,'assertive':list.actstatus==3}">{{list.name}}</h2>

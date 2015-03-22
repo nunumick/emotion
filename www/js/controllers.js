@@ -121,11 +121,14 @@ angular.module('kicker.controllers', [])
       uid : UserAccountService.getItem('uid') || 0
     })
     .then(function(promise){
-      $scope.detail = ActivityDetailService.setData(promise.data.datas);
-      $scope.status = status[$scope.detail.actstatus-1];
-      $scope.nick = $scope.detail.usercreate.nick || '匿名用户';
-      //$scope.startDate = toISOString($scope.detail.stime);
-      //$scope.endDate = toISOString($scope.detail.etime);
+      var data = promise.data;
+      if(data.success){
+        $scope.detail = ActivityDetailService.setData(promise.data.datas);
+        $scope.status = status[$scope.detail.actstatus-1];
+        $scope.nick = $scope.detail.usercreate.nick || '匿名用户';
+        //$scope.startDate = toISOString($scope.detail.stime);
+        //$scope.endDate = toISOString($scope.detail.etime);
+      }
     })
     .finally(function(){
       $scope.$broadcast('scroll.refreshComplete');
@@ -629,6 +632,8 @@ angular.module('kicker.controllers', [])
         UserInfoService.save($scope.formData);
         $scope.modal.hide();
         $scope.$emit('userinfoupdate');
+      }else{
+        console.log(data.msg);
       }
     })
   }

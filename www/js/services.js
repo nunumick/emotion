@@ -1,6 +1,6 @@
 angular.module('kicker.services', [])
 
-.factory('ApiService',function($http, $rootScope){
+.factory('ApiService',function($http, $rootScope, $ionicLoading, $state, $timeout){
   var host = 'http://dip.taobao.net/mock/';
   var server = $rootScope.CustomDatas.host + '/';
   var apiCfg = [
@@ -121,9 +121,37 @@ angular.module('kicker.services', [])
   })
 
   //promise factory
-  apis.serve = function(serve,params){
+  apis.serve = function(serve,params,loading){
+    $ionicLoading.show({
+      template : loading || '加载中...'
+    })
     return $http.jsonp(serve,{
       params : params
+    })
+    .then(function(res){
+      $ionicLoading.hide();
+      $rootScope.CustomDatas.offline = false;
+      $rootScope.CustomDatas.serveError = false;
+      return res;
+    },function(res){
+      var status = res.status+'';
+      var msg = '';
+
+      return $timeout(function(){
+        $ionicLoading.hide()
+      },1000).then(function(){
+        if(status.match(/^4\d{2}$/)){
+          $rootScope.CustomDatas.offline = true;
+          msg = '连接失败，请检查网络连接！';
+        }else if(status.match(/^5\d{2}$/)){
+          $rootScope.CustomDatas.serveError = true;
+          msg = '数据服务无响应！';
+        }
+        return {data:{
+          success: false,
+          msg : msg
+        }}
+      })
     })
   }
 
@@ -254,7 +282,7 @@ angular.module('kicker.services', [])
   var serveName = ApiService.kill;
   return {
     serve : function(params){
-      return ApiService.serve(serveName,params);
+      return ApiService.serve(serveName,params,'剔除中...');
     }
   }
 })
@@ -275,7 +303,7 @@ angular.module('kicker.services', [])
 
   return {
     serve : function(params){
-      return ApiService.serve(serveName,params);
+      return ApiService.serve(serveName,params,'创建中...');
     }
   }
 
@@ -287,7 +315,7 @@ angular.module('kicker.services', [])
 
   return {
     serve : function(params){
-      return ApiService.serve(serveName,params);
+      return ApiService.serve(serveName,params,'取消中...');
     },
     remove : function(){
       var _self = this;
@@ -331,14 +359,14 @@ angular.module('kicker.services', [])
   var cancelName = ApiService.cancelApply;
 
   return {
-    serve : function(serveName,params){
-      return ApiService.serve(serveName,params);
+    serve : function(serveName,params,msg){
+      return ApiService.serve(serveName,params,msg);
     },
     confirm : function(params){
-      return this.serve(confirmName,params);
+      return this.serve(confirmName,params,'申请中...');
     },
     cancel : function(params){
-      return this.serve(cancelName,params);
+      return this.serve(cancelName,params,'退出中...');
     }
   }
 })
@@ -349,7 +377,7 @@ angular.module('kicker.services', [])
 
   return {
     serve : function(params){
-      return ApiService.serve(serveName,params);
+      return ApiService.serve(serveName,params,'登录中...');
     },
     save : function(data){
       UserAccountService.save({
@@ -367,7 +395,7 @@ angular.module('kicker.services', [])
 
   return {
     serve : function(params){
-      return ApiService.serve(serveName,params);
+      return ApiService.serve(serveName,params,'注册中...');
     },
     save : function(data){
       UserAccountService.save({
@@ -385,14 +413,14 @@ angular.module('kicker.services', [])
   var getServeName = ApiService.getuserinfo;
 
   return {
-    serve : function(serveName,params){
-      return ApiService.serve(serveName,params);
+    serve : function(serveName,params,msg){
+      return ApiService.serve(serveName,params,msg);
     },
     get : function(params){
       return this.serve(getServeName,params);
     },
     update : function(params){
-      return this.serve(updateServeName,params);
+      return this.serve(updateServeName,params,'保存中...');
     },
     save : function(data){
       UserAccountService.save({
