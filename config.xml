@@ -13,10 +13,6 @@
   <preference name="UIWebViewBounce" value="false"/>
   <preference name="DisallowOverscroll" value="true"/>
   <preference name="BackupWebStorage" value="none"/>
-  <feature name="StatusBar">
-    <param name="ios-package" value="CDVStatusBar" onload="true"/>
-  </feature>
-  <feature name="NetworkStatus">
-    <param name="ios-package" value="CDVConnection"/>
-  </feature>
+  <preference name="SplashScreen" value="welcome"/>
+  <preference name="SplashScreenDelay" value="3000"/>
 </widget>

@@ -5,20 +5,19 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('eMotion', ['ionic', 'eMotion.controllers', 'eMotion.services'])
+angular.module('eMotion', ['ionic', 'eMotion.controllers', 'eMotion.services', 'ngCordova'])
 
-.run(function($ionicPlatform,$ionicHistory,$rootScope,$state,UserAccountService) {
+.run(function($ionicPlatform,$ionicHistory,$rootScope,$state,UserAccountService,$cordovaNetwork,$cordovaSplashscreen,$cordovaKeyboard,$cordovaStatusbar) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
-    if (window.cordova && window.cordova.plugins.Keyboard) {
-      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-    }
-    if (window.StatusBar) {
-      // org.apache.cordova.statusbar required
-      StatusBar.styleDefault();
-      //$rootScope.netType = navigator.connection.type;
-    }
+    $cordovaKeyboard.hideAccessoryBar(true);
+
+    //default statusbar
+    $cordovaStatusbar.style(0);
+
+    //欢迎页面
+    $cordovaSplashscreen.hide();
 
   });
 
@@ -130,12 +129,12 @@ angular.module('eMotion', ['ionic', 'eMotion.controllers', 'eMotion.services'])
 
   })
 
-  /*$rootScope.$on('$cordovaNetwork:online',function(event, netWorkState){
+  $rootScope.$on('$cordovaNetwork:online',function(event, netWorkState){
     $rootScope.CustomDatas.offline = false;
   })
   $rootScope.$on('$cordovaNetwork:offline',function(event, netWorkState){
     $rootScope.CustomDatas.offline = true;
-  })*/
+  })
 
 })
 
