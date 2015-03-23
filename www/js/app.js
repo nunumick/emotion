@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('kicker', ['ionic', 'kicker.controllers', 'kicker.services'])
+angular.module('eMotion', ['ionic', 'eMotion.controllers', 'eMotion.services'])
 
 .run(function($ionicPlatform,$ionicHistory,$rootScope,$state,UserAccountService) {
   $ionicPlatform.ready(function() {

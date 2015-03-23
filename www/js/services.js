@@ -1,4 +1,4 @@
-angular.module('kicker.services', [])
+angular.module('eMotion.services', [])
 
 .factory('ApiService',function($http, $rootScope, $ionicLoading, $state, $timeout){
   var host = 'http://dip.taobao.net/mock/';

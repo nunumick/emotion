@@ -1,4 +1,4 @@
-angular.module('kicker.controllers', [])
+angular.module('eMotion.controllers', [])
 
 .controller('TabCtrl', function($scope, $state) {
   $scope.toActivityGround = function(){

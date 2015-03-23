@@ -1,7 +1,7 @@
 {
-  "name": "kicker",
+  "name": "eMotion",
   "version": "1.0.0",
-  "description": "kicker: An Ionic project",
+  "description": "e动: 您贴身的运动管家",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^0.7.1",
