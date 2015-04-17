@@ -121,36 +121,47 @@ angular.module('eMotion.services', [])
   })
 
   //promise factory
-  apis.serve = function(serve,params,loading){
+  apis.serve = function(serve,params,loading,delay){
+    //共享第三个参数位置
+    if(typeof loading == 'number'){
+      delay = loading;
+      loading = '';
+    }
+
     $ionicLoading.show({
       template : loading || '加载中...'
     })
-    return $http.jsonp(serve,{
-      params : params
-    })
-    .then(function(res){
-      $ionicLoading.hide();
-      $rootScope.CustomDatas.offline = false;
-      $rootScope.CustomDatas.serveError = false;
-      return res;
-    },function(res){
-      var status = res.status+'';
-      var msg = '';
 
-      return $timeout(function(){
-        $ionicLoading.hide()
-      },1000).then(function(){
-        if(status.match(/^4\d{2}$/)){
-          $rootScope.CustomDatas.offline = true;
-          msg = '连接失败，请检查网络连接！';
-        }else if(status.match(/^5\d{2}$/)){
-          $rootScope.CustomDatas.serveError = true;
-          msg = '数据服务无响应！';
-        }
-        return {data:{
-          success: false,
-          msg : msg
-        }}
+    return $timeout(function(){
+      //console.log('delay '+ (delay || 0));
+    },delay||0).then(function(){
+      return $http.jsonp(serve,{
+        params : params
+      })
+      .then(function(res){
+        $ionicLoading.hide();
+        $rootScope.CustomDatas.offline = false;
+        $rootScope.CustomDatas.serveError = false;
+        return res;
+      },function(res){
+        var status = res.status+'';
+        var msg = '';
+
+        return $timeout(function(){
+          $ionicLoading.hide()
+        },1000).then(function(){
+          if(status.match(/^4\d{2}$/)){
+            $rootScope.CustomDatas.offline = true;
+            msg = '连接失败，请检查网络连接！';
+          }else if(status.match(/^5\d{2}$/)){
+            $rootScope.CustomDatas.serveError = true;
+            msg = '数据服务无响应！';
+          }
+          return {data:{
+            success: false,
+            msg : msg
+          }}
+        })
       })
     })
   }
@@ -282,7 +293,7 @@ angular.module('eMotion.services', [])
   var serveName = ApiService.kill;
   return {
     serve : function(params){
-      return ApiService.serve(serveName,params,'剔除中...');
+      return ApiService.serve(serveName,params,'剔除中...',1000);
     }
   }
 })
@@ -303,45 +314,36 @@ angular.module('eMotion.services', [])
 
   return {
     serve : function(params){
-      return ApiService.serve(serveName,params,'创建中...');
+      return ApiService.serve(serveName,params,'创建中...',1000);
     }
   }
 
 })
 
 //活动创建人取消活动服务
-.factory('ActivityRemoveService',function(ApiService,$ionicPopup,UserAccountService){
+.factory('ActivityRemoveService',function(ApiService,$cordovaDialogs,UserAccountService){
   var serveName = ApiService.cancel;
 
   return {
     serve : function(params){
-      return ApiService.serve(serveName,params,'取消中...');
+      return ApiService.serve(serveName,params,'取消中...',1000);
     },
     remove : function(){
       var _self = this;
       return function(aid,sfn,ffn){
-        var confirm = $ionicPopup.confirm({
-          title : '取消活动',
-          template : '您确定要取消这个活动吗?'
-        });
-
-        confirm.then(function(res){
-          if(res){
+        $cordovaDialogs.confirm('活动取消后不可再恢复','取消活动')
+        .then(function(buttonIndex){
+          if(buttonIndex===1){
             _self.serve({
               uid : UserAccountService.getItem('uid'),
               aid : aid
             }).then(function(promise){
               var data = promise.data;
               if(data.success){
-                $ionicPopup.alert({
-                  title : '取消成功',
-                  template : '取消成功'
-                }).then(sfn);
+                sfn();
               }else{
-                $ionicPopup.alert({
-                  title : '取消失败',
-                  template : data.msg
-                }).then(ffn);
+                $cordovaDialogs.alert(data.msg,'取消失败')
+                .then(ffn);
               }
             })
           }else{
@@ -359,14 +361,14 @@ angular.module('eMotion.services', [])
   var cancelName = ApiService.cancelApply;
 
   return {
-    serve : function(serveName,params,msg){
-      return ApiService.serve(serveName,params,msg);
+    serve : function(serveName,params,msg,delay){
+      return ApiService.serve(serveName,params,msg,delay);
     },
     confirm : function(params){
-      return this.serve(confirmName,params,'申请中...');
+      return this.serve(confirmName,params,'申请中...',1000);
     },
     cancel : function(params){
-      return this.serve(cancelName,params,'退出中...');
+      return this.serve(cancelName,params,'退出中...',1000);
     }
   }
 })
@@ -377,7 +379,7 @@ angular.module('eMotion.services', [])
 
   return {
     serve : function(params){
-      return ApiService.serve(serveName,params,'登录中...');
+      return ApiService.serve(serveName,params,'登录中...',1000);
     },
     save : function(data){
       UserAccountService.save({
@@ -395,7 +397,7 @@ angular.module('eMotion.services', [])
 
   return {
     serve : function(params){
-      return ApiService.serve(serveName,params,'注册中...');
+      return ApiService.serve(serveName,params,'注册中...',1000);
     },
     save : function(data){
       UserAccountService.save({
@@ -413,14 +415,14 @@ angular.module('eMotion.services', [])
   var getServeName = ApiService.getuserinfo;
 
   return {
-    serve : function(serveName,params,msg){
-      return ApiService.serve(serveName,params,msg);
+    serve : function(serveName,params,msg,delay){
+      return ApiService.serve(serveName,params,msg,delay);
     },
     get : function(params){
       return this.serve(getServeName,params);
     },
     update : function(params){
-      return this.serve(updateServeName,params,'保存中...');
+      return this.serve(updateServeName,params,'保存中...',1000);
     },
     save : function(data){
       UserAccountService.save({

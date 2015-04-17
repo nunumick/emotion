@@ -12,5 +12,28 @@
   margin:-10px -10px 5px -10px;
 }
 .notice-bar{
-  background-color:pink;
+  background-color:#fcdfdf;
+}
+.emotion-form .item{
+  -webkit-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+  background-color:white;
+}
+.emotion-form .item.error{
+  background-color:#fcdfdf;
+}
+.emotion-resource p{
+  white-space:normal;
+}
+.emotion-detail .list{
+  padding-bottom:44px;
+}
+.emotion-forget{
+  text-decoration:none;
+}
+.emotion-status span{
+  background:#fff;
+}
+.emotion-status span.stable{
+  background:#ccc;
 }

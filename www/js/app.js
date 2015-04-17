@@ -7,19 +7,19 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('eMotion', ['ionic', 'eMotion.controllers', 'eMotion.services', 'ngCordova'])
 
-.run(function($ionicPlatform,$ionicHistory,$rootScope,$state,UserAccountService,$cordovaNetwork,$cordovaSplashscreen,$cordovaKeyboard,$cordovaStatusbar) {
+.run(function($ionicPlatform,$ionicHistory,$rootScope,$state,UserAccountService,/*$cordovaNetwork,*/$cordovaKeyboard,$cordovaStatusbar) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
-    $cordovaKeyboard.hideAccessoryBar(true);
-
-    //default statusbar
-    $cordovaStatusbar.style(0);
-
-    //欢迎页面
-    $cordovaSplashscreen.hide();
-
+    if (window.cordova && window.cordova.plugins.Keyboard) {
+      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+    }
+    if (window.StatusBar) {
+      // org.apache.cordova.statusbar required
+      //StatusBar.styleDefault();
+    }
   });
+
 
   UserAccountService.init();
 
@@ -89,11 +89,23 @@ angular.module('eMotion', ['ionic', 'eMotion.controllers', 'eMotion.services', '
      hideTabs : false,
      from : '',
      home : 'tab.lists',
-     dash : 'tab.dash'
+     dash : 'tab.dash',
+     offline : false
    }
+
+  $rootScope.$on('stateChange:mine',function(){
+    $state.go('tab.mine').then(function(){
+      //$state.reload();
+    });
+  })
+  $rootScope.$on('stateChange:join',function(){
+    $state.go('tab.join');
+  })
 
   //在切换前
   $rootScope.$on('$stateChangeStart',function(event,next,nextParams,from,fromParams){
+
+    delete $rootScope.CustomDatas.listTitle;
 
     //登录验证
     if(!routeCheck(next.url,routesThatDontRequireAuth) && !UserAccountService.isLogin()){
@@ -129,12 +141,14 @@ angular.module('eMotion', ['ionic', 'eMotion.controllers', 'eMotion.services', '
 
   })
 
+  /*
   $rootScope.$on('$cordovaNetwork:online',function(event, netWorkState){
     $rootScope.CustomDatas.offline = false;
   })
   $rootScope.$on('$cordovaNetwork:offline',function(event, netWorkState){
     $rootScope.CustomDatas.offline = true;
   })
+ */
 
 })
 

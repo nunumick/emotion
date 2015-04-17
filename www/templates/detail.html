@@ -1,16 +1,19 @@
-<ion-view view-title="{{detail.name}}" cache-view="false">
+<ion-view cache-view="false">
+  <ion-nav-title>
+  {{detail.name}}
+  </ion-nav-title>
   <ion-nav-buttons side="secondary">
   <a class="button button-small button-icon icon ion-ios7-more" ng-controller="ActionSheet" ng-click="show()"></a>
   </ion-nav-buttons>
   <ion-content class="padding">
   <ion-refresher on-refresh="refresh()"></ion-refresher>
   <div class="notice-bar-box">
-    <ion-item class="notice-bar dark item-icon-left" ng-show="$root.CustomDatas.offline">
+    <ion-item class="notice-bar dark item-icon-left hide" ng-class="{show:$root.CustomDatas.offline}">
        <i class="icon ion-alert-circled assertive"></i>
       网络连接失败，请检查你的网络设置
     </ion-item>
   </div>
-  <ion-list>
+  <ion-list class="emotion-detail">
     <ion-item class="item-divider">
       活动
     </ion-item>
@@ -31,11 +34,10 @@
       <span class="item-note">{{status}}</span>
     </ion-item>
     <ion-item class="item-divider">
-      场地
+      活动地点
     </ion-item>
-    <ion-item class="item-avatar">
-      <img src="{{$root.CustomDatas.host}}{{detail.resource.rpic}}">
-      <h2>{{detail.resource.rname}}</h2>
+    <ion-item class="emotion-resource">
+      <h2>{{detail.resource.rname || '无'}}</h2>
       <p>{{detail.resource.add}}</p>
     </ion-item>
     <ion-item class="item-divider">
@@ -69,7 +71,7 @@
     </ion-item>
   </ion-list>
   </ion-content>
-  <ion-bar ng-class="{'bar-balanced':detail.actstatus==1}" class="bar bar-footer">
+  <ion-bar ng-class="{'bar-energized':detail.actstatus==1}" class="bar bar-footer">
     <a class="h1 title" ng-show="detail.actstatus == 1 && ($root.CustomDatas.from!='tab.join' && !detail.signstatus)" ng-click="join({{detail.aid}})">
       报名
     </a>

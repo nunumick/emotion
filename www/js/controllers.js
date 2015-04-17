@@ -12,27 +12,78 @@ angular.module('eMotion.controllers', [])
 .controller('DashCtrl', function($rootScope, $scope, $state, UserAccountService) {
 })
 
-.controller('ActionSheet', function($rootScope, $scope, $state, $ionicActionSheet, ActivityRemoveService){
+.controller('ActionSheet', function($rootScope, $scope, $state, $ionicActionSheet, ActivityRemoveService, UserAccountService, $cordovaDialogs){
 
   var hideSheet = null;
+  var $detail = $scope.$parent.$parent;
+
+  var params = {};
+
   var buttons = {
       buttons : [
-        {'text':'返回首页'},
-        {'text':'分享活动'}
+        {'text':'所有活动'},
+        {'text':'发送给朋友'},
+        {'text':'分享到朋友圈'}
       ],
       cancelText : '取消',
       cancel : function(){
         hideSheet();
       },
       buttonClicked : function(index){
-        if(index==0){
+        switch(index){
+          case 0:
           $state.go('tab.lists');
-        }else if(index==1){
+          break;
+
+          case 1:
+          params.scene = 0; //'会话'
+          break;
+
+          case 2:
+          params.scene = 1; //'朋友圈'
+          break;
+
+          default:
+          return;
         }
+
+        //分享
+        if(index>=1&&index<=2&&params.message){
+          Wechat.share(params, function () {
+            //alert("Success");
+          }, function (reason) {
+           $cordovaDialogs.alert('',"分享失败: " + reason);
+          });
+        }
+
         return true;
       }
-    };
+    }
 
+  $detail.$watch('detail',function(detail){
+    if(detail){
+      setParams(detail);
+    }
+  })
+
+  function setParams(detail){
+
+    if(!window.Wechat) return;
+
+    var desc1 = '我发起了一个体育活动，伙伴们，让我们一起畅快运动挥洒汗水吧！';
+    var desc2 = '我发现这个活动挺棒的，生命在于运动，伙伴们，约起来！';
+    var ext = ['速度搞起','就等你了','萌萌哒','火爆了','手慢无','就是这个feel','一起来吧','招募中','动起来','无兄弟，不运动','约起来'];
+
+    params.message = {
+      title: detail.name + '，' + ext[Math.floor(Math.random()*ext.length)] + '！',
+      description: detail.usercreate.uid == UserAccountService.getItem('uid') ? desc1 : desc2,
+      thumb: "www/img/emotion.png",
+      media: {}
+    }
+
+    params.message.media.type = Wechat.Type.LINK;
+    params.message.media.webpageUrl = "http://121.40.28.70/h5/share.html?aid=" + detail.aid;
+  }
 
   if($rootScope.CustomDatas.from.name == 'tab.mine'){
     buttons.destructiveText = '取消活动';
@@ -58,6 +109,7 @@ angular.module('eMotion.controllers', [])
   $scope.title = '所有活动';
   $scope.path = 'detail';
   $scope.del = false;
+  $scope.listNums = 0;
 
   if($state.is('tab.lists')){
     type = 1;
@@ -80,6 +132,10 @@ angular.module('eMotion.controllers', [])
     .then(function(promise){
       ActivityListsService.setData(promise.data.datas,type);
       $scope.lists = ActivityListsService.all();
+      //console.log($scope.lists.length);
+      //$rootScope.CustomDatas.listTitle = $scope.lists.length;
+      $scope.listNums = $scope.lists.length;
+      //console.log($state);
     })
     .finally(function(){
       $scope.$broadcast('scroll.refreshComplete');
@@ -100,7 +156,7 @@ angular.module('eMotion.controllers', [])
 
 })
 
-.controller('DetailCtrl', function($scope, $state, $ionicPopup, UserAccountService, ActivityDetailService, ActivityApplyService) {
+.controller('DetailCtrl', function($rootScope, $scope, $state, $cordovaDialogs, UserAccountService, ActivityDetailService, ActivityApplyService) {
 
   $scope.path = $state.is('tab.lists-detail') ? 'members' : 'dash-members';
   var status = [
@@ -141,12 +197,9 @@ angular.module('eMotion.controllers', [])
       return;
     }
     if(!UserAccountService.getItem('nick')){
-      $ionicPopup.confirm({
-        title : '提示',
-        template : '请先补充个人信息'
-      })
-      .then(function(res){
-        if(res){
+      $cordovaDialogs.confirm('请先补充个人信息','提示')
+      .then(function(buttonIndex){
+        if(buttonIndex===1){
           $state.go('tab.setup');
         }
       })
@@ -159,34 +212,9 @@ angular.module('eMotion.controllers', [])
     .then(function(promise){
       var data = promise.data;
       if(data.success){
-        $ionicPopup.alert({
-          title : '报名成功',
-          template : '去我加入的活动列表看看？',
-          buttons : [
-            {
-            text : '好',
-            type: 'button-positive',
-            onTap : function(){
-              $state.go('tab.join');
-              return true;
-            }
-          }
-          ]
-        });
+        $rootScope.$broadcast('stateChange:join');
       }else{
-        $ionicPopup.alert({
-          title : '报名失败',
-          template : promise.data.msg,
-          buttons : [
-            {
-            text : '知道了',
-            type: 'button-positive',
-            onTap : function(){
-              return true;
-            }
-          }
-          ]
-        });
+        $cordovaDialogs.alert(promise.data.msg,'报名失败');
       }
     });
   }
@@ -204,34 +232,9 @@ angular.module('eMotion.controllers', [])
     .then(function(promise){
       var data = promise.data;
       if(data.success){
-        $ionicPopup.alert({
-          title : '取消报名成功',
-          template : promise.data.msg,
-          buttons : [
-            {
-            text : 'OK',
-            type: 'button-positive',
-            onTap : function(){
-              $state.go('tab.join');
-              return true;
-            }
-          }
-          ]
-        });
+        $rootScope.$broadcast('stateChange:join');
       }else{
-        $ionicPopup.alert({
-          title : '取消报名失败',
-          template : promise.data.msg,
-          buttons : [
-            {
-            text : '知道了',
-            type: 'button-positive',
-            onTap : function(){
-              return true;
-            }
-          }
-          ]
-        });
+        $cordovaDialogs.alert(promise.data.msg,'取消报名失败');
       }
     });
   }
@@ -244,38 +247,25 @@ angular.module('eMotion.controllers', [])
 
 })
 
-.controller('RemoveCtrl',function($scope, $state, $ionicPopup, UserAccountService, ActivityRemoveService){
+.controller('RemoveCtrl',function($scope, $state, $cordovaDialogs, UserAccountService, ActivityRemoveService){
   $scope.remove = function(aid){
-    $ionicPopup.confirm({
-      title : '取消活动',
-      template : '您确定要取消这个活动吗?'
-    }).then(function(res){
-      if(res){
-        ActivityRemoveService.serve({
-          uid : UserAccountService.getItem('uid'),
-          aid : aid
-        })
-        .then(function(promise){
-          var data = promise.data;
-          if(data.success){
-            $ionicPopup.alert({
-              title : '取消活动',
-              template : '取消成功'
-            })
-          }else{
-            $ionicPopup.alert({
-              title : '取消活动',
-              template : data.msg
-            })
-          }
-        })
+    ActivityRemoveService.serve({
+      uid : UserAccountService.getItem('uid'),
+      aid : aid
+    })
+    .then(function(promise){
+      var data = promise.data;
+      if(data.success){
       }else{
+        $cordovaDialogs.alert(data.msg,'取消失败');
       }
     })
   }
 })
 
 .controller('MembersCtrl', function($rootScope, $scope, $state, $ionicHistory, UserAccountService, ActivityMembersService, MemberKillService) {
+
+  $scope.listNums = 0;
 
   function fetch(page){
     ActivityMembersService.serve({
@@ -285,6 +275,7 @@ angular.module('eMotion.controllers', [])
     })
     .then(function(promise){
       $scope.lists = promise.data.datas;
+      $scope.listNums = $scope.lists.length;
     })
     .finally(function(){
       $scope.$broadcast('scroll.refreshComplete');
@@ -313,18 +304,18 @@ angular.module('eMotion.controllers', [])
 
 })
 
-.controller('CreateCtrl', function($rootScope, $scope, $state, $ionicHistory, $ionicModal, $ionicPopup, UserAccountService, ActivityCreateService, ActivityResourceService) {
+.controller('CreateCtrl', function($rootScope, $scope, $state, $ionicHistory, $ionicModal, $cordovaDialogs, UserAccountService, ActivityCreateService, ActivityResourceService) {
 
   var formData = $scope.formData = {
     name : '',
     startDate : '',
     endDate : '',
     uid : UserAccountService.getItem('uid'),
-    rid : '',
+    rid : 0,
     limit : '',
     price : '',
     bak : '',
-    type : ''
+    type : 1
   };
 
   $ionicModal.fromTemplateUrl('templates/create.html', {
@@ -359,6 +350,13 @@ angular.module('eMotion.controllers', [])
       $scope.resourcesLists = promise.data.datas;
     })
   }
+  $scope.$watch('resourcesLists',function(list){
+    if(list && list.length){
+      $scope.formData.rid = list[0].rid;
+    }else{
+      $scope.formData.rid = 0;
+    }
+  })
 
   function setTimeZone(datetime){
     var timestr = datetime.getTime();
@@ -366,7 +364,10 @@ angular.module('eMotion.controllers', [])
     return date.toISOString().replace(/T/,' ').replace(/\.\w*$/,'');
   }
 
-  $scope.create = function(){
+  $scope.create = function(form){
+
+    if(form.$invalid) return false;
+
     ActivityCreateService.serve({
       uid : formData.uid,
       name : encodeURI(formData.name),
@@ -376,46 +377,15 @@ angular.module('eMotion.controllers', [])
       limit : formData.limit || 0,
       bak : encodeURI(formData.bak || ''),
       type : formData.type || 1,
-      rid : formData.rid
+      rid : formData.rid || 0
     })
     .then(function(promise){
       var data = promise.data;
       if(data.success){
-        $ionicPopup.alert({
-          title : '创建成功',
-          template : '去我创建的活动看看？',
-          buttons : [
-            {
-              text : '好',
-              type: 'button-positive',
-              onTap : function(){
-                $state.go('tab.mine');
-                return true;
-              }
-            },
-            {
-              text : '继续创建',
-              type: 'button-positive',
-              onTap : function(){
-                return true;
-              }
-            }
-          ]
-        });
+        $scope.hide();
+        $rootScope.$broadcast('stateChange:mine');
       }else{
-        $ionicPopup.alert({
-          title : '创建失败',
-          template : promise.data.msg,
-          buttons : [
-            {
-              text : '知道了',
-              type: 'button-positive',
-              onTap : function(){
-                return true;
-              }
-            }
-          ]
-        });
+        $cordovaDialogs.alert(promise.data.msg,'创建失败');
       }
     })
   }
@@ -468,54 +438,37 @@ angular.module('eMotion.controllers', [])
 
 .controller('ContactCtrl', function($scope) {})
 
-.controller('LoginCtrl', function($rootScope, $scope, $state, $ionicPopup, $ionicHistory, UserAccountService, LoginService) {
+.controller('LoginCtrl', function($rootScope, $scope, $state, $cordovaDialogs, $ionicHistory, UserAccountService, LoginService) {
   $scope.formData = {
     phone : '',
     pw : ''
   };
 
-  function phoneValid(phone){
-    if(!phone){
-      popup('错误','请输入合法的手机号码');
+  function phoneValid(){
+    if(!$scope.formData.phone.match(/^1[3|4|5|8]\d{9}$/)){
+      $cordovaDialogs.alert('请输入有效的手机号码','登录失败');
+      return false;
+    }else{
+      return true;
     }
-    return (!!phone);
   }
 
-  function popup(title,msg,text,fn){
-    $ionicPopup.alert(
-      {
-        title : title,
-        template : msg,
-        buttons : [
-          {
-            text : text || '知道了',
-            type: 'button-positive',
-            onTap : function(){
-              fn&&fn();
-              return true;
-            }
-          }
-        ]
-      }
-    )
-  }
+  $scope.login = function(form){
 
-  $scope.login = function(){
-    if(!phoneValid($scope.formData.phone)) return;
+    if(form.$invalid || !phoneValid()) return false;
+
     LoginService.serve({
       phoneNum : $scope.formData.phone,
       passwd : $scope.formData.pw
     }).then(function(promise){
       var data = promise.data;
       if(data.success){
-        popup('登录成功','欢迎您：' + (data.datas.nick || '匿名用户'),'好',function(){
           LoginService.save(data.datas);
           var from = $rootScope.CustomDatas.from.name;
           from = from == 'admin.register' ? $rootScope.CustomDatas.dash : from;
           $state.go(from || $rootScope.CustomDatas.dash, $rootScope.CustomDatas.fromParams || null);
-        });
       }else{
-        popup('出错啦',data.msg);
+        $cordovaDialogs.alert(data.msg,'登录失败');
       }
     })
   }
@@ -531,60 +484,43 @@ angular.module('eMotion.controllers', [])
 })
 
 //注册控制器
-.controller('RegisterCtrl', function($scope,$state,$ionicHistory,$ionicPopup,RegisterService) {
+.controller('RegisterCtrl', function($scope,$state,$ionicHistory,$cordovaDialogs,RegisterService) {
   $scope.formData = {
     phone : '',
     pw : '',
     pwcheck : ''
   };
 
-  function phoneValid(phone){
-    if(!phone){
-      popup('错误','请输入合法的手机号码');
+  function phoneValid(){
+    var state = $scope.formData.phone.match(/^1[3|4|5|8]\d{9}$/);
+    if(!state){
+      $cordovaDialogs.alert('请输入有效的手机号码','注册失败');
     }
-    return (!!phone);
+    return state;
   }
 
   function pwValid(pw,pwcheck){
-    if(!(pw && pw===pwcheck)){
-      popup('错误','两次输入的密码必须一致');
+    var state = $scope.formData.pw&&$scope.formData.pw===$scope.formData.pwcheck
+    if(!state){
+      $cordovaDialogs.alert('密码不一致，请重新输入','注册失败');
     }
-    return !!(pw&&pw===pwcheck);
+    return state;
   }
 
-  function popup(title,msg,text,fn){
-    $ionicPopup.alert(
-      {
-        title : title,
-        template : msg,
-        buttons : [
-          {
-            text : text || '知道了',
-            type: 'button-positive',
-            onTap : function(){
-              fn&&fn();
-              return true;
-            }
-          }
-        ]
-      }
-    )
-  }
+  $scope.register = function(form){
 
-  $scope.register = function(){
-    if(!(phoneValid($scope.formData.phone)&&pwValid($scope.formData.pw,$scope.formData.pwcheck))) return;
+    if(form.$invalid || !phoneValid() || !pwValid()) return false;
+
     RegisterService.serve({
       phoneNum : $scope.formData.phone,
       passwd : $scope.formData.pw
     }).then(function(promise){
       var data = promise.data;
       if(data.success){
-        popup('注册成功','感谢您的支持，请补充个人信息','好',function(){
           RegisterService.save(promise.data.datas);
           $state.go('tab.setup');
-        })
       }else{
-        popup('出错啦',promise.data.msg);
+        $cordovaDialogs.alert(promise.data.msg, '注册失败');
       }
     })
   }

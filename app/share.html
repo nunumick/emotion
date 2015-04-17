@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <script src="../../zepto/zepto.min.js"></script>
+</head>
+<body>
+  <div id="content"></div>
+  <script type="text/template" id="tpl">
+    <h2>{{title}}</h2>
+    <h3>活动时间</h3>
+    <p><label>活动开始：</label><span>{{stime}}</span></p>
+    <p><label>活动结束：</label><span>{{etime}}</span></p>
+    <h3>场地信息</h3>
+    <p><label>活动地点：</label><span>{{add}}</span></p>
+  </script>
+  <script>
+    $(function(){
+      var aid = null;
+      var api = 'http://121.40.28.70/prototype/activity/activityDetail.do?uid=0';
+      if(aid = location.search.match(/aid=(\d+)/)){
+        aid = aid[1];
+      }
+      var tpl = $('#tpl').html();
+
+      function render(tpl,data){
+        var _tpl = tpl.match(/(\{\{\w+\}\})/ig);
+
+        _tpl.forEach(function(key,index){
+          tpl = tpl.replace(key,data[key.replace(/\}|\{/ig,'')]);
+        })
+
+        return tpl;
+      }
+
+      $.ajax({
+        dataType : 'jsonp',
+        url : api,
+        data : {
+          aid : aid
+        },
+        success : function(res){
+          console.log(res);
+          var datas = res.datas;
+          var data = {
+            title : datas.name,
+            stime : datas.stime,
+            etime : datas.etime,
+            add : datas.resource.rname || '无'
+          };
+          $('#content').html(render(tpl,data));
+        }
+      })
+
+    })
+  </script>
+</body>
+</html>
