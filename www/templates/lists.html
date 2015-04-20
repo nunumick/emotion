@@ -13,7 +13,7 @@
       网络连接失败，请检查你的网络设置
     </ion-item>
     <ion-item ng-class="{'item-remove-animate':del}" class="item-thumbnail-left item-icon-right" ng-repeat="list in lists" type="item-text-wrap" href="#/tab/{{path}}/{{list.aid}}">
-      <img ng-src="{{list.resource.rpic ? ($root.CustomDatas.host + list.resource.rpic) : 'img/emotion.png'}}">
+      <img ng-src="{{list.resource.rpic ? ($root.CustomDatas.host + list.resource.rpic) : 'img/emotion-icon.png'}}">
       <h2>{{list.name||'无主题'}}</h2>
       <p>
         已报:{{list.csize}}, 剩余:{{list.allsize-list.csize}}

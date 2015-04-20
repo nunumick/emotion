@@ -31,9 +31,6 @@
 .emotion-forget{
   text-decoration:none;
 }
-.emotion-status span{
-  background:#fff;
-}
 .emotion-status span.stable{
   background:#ccc;
 }

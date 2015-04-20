@@ -75,9 +75,9 @@ angular.module('eMotion.controllers', [])
     var ext = ['速度搞起','就等你了','萌萌哒','火爆了','手慢无','就是这个feel','一起来吧','招募中','动起来','无兄弟，不运动','约起来'];
 
     params.message = {
-      title: detail.name + '，' + ext[Math.floor(Math.random()*ext.length)] + '！',
+      title: detail.name/* + '，' + ext[Math.floor(Math.random()*ext.length)] + '！'*/,
       description: detail.usercreate.uid == UserAccountService.getItem('uid') ? desc1 : desc2,
-      thumb: "www/img/emotion.png",
+      thumb: "www/img/emotion-icon.png",
       media: {}
     }
 
