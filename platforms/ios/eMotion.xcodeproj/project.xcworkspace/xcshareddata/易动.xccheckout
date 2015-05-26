@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E5F4D5B0-55B3-4865-B117-61C56B65612A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>易动</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BFF3B1DE392F84D2E7B2AD98D35A7AD9786D9597</key>
+		<string>gitlab.alibaba-inc.com:qiuchang/h5app.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>platforms/ios/易动.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BFF3B1DE392F84D2E7B2AD98D35A7AD9786D9597</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>gitlab.alibaba-inc.com:qiuchang/h5app.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BFF3B1DE392F84D2E7B2AD98D35A7AD9786D9597</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BFF3B1DE392F84D2E7B2AD98D35A7AD9786D9597</string>
+			<key>IDESourceControlWCCName</key>
+			<string>eMotion</string>
+		</dict>
+	</array>
+</dict>
+</plist>

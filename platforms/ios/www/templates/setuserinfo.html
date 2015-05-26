@@ -1,0 +1,22 @@
+<ion-modal-view cache-view="false">
+  <form name="set_form" ng-submit="setinfo()">
+  <ion-header-bar class="bar-assertive">
+    <button class="button button-clear" type="button" ng-click="close()">取消</button>
+    <h1 class="title">个人信息</h1>
+    <button class="button button-clear" type="submit" side="secondary">保存</button>
+  </ion-header-bar>
+  <ion-content>
+    <ion-list class="padding">
+      <ion-item class="item-input">
+        <span class="input-label">昵称</span>
+        <input type="text" placeholder="{{nick}}" ng-model="formData.nick" required>
+      </ion-item>
+      <ion-item class="item-input">
+        <span class="input-label">支付宝账号</span>
+        <input type="text" placeholder="{{alipay}}" ng-model="formData.alipay" required>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+  </form>
+</ion-modal-view>
+

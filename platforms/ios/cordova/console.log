@@ -1,0 +1,486 @@
+2015-04-01 19:04:38.192 eMotion[33135:2520430] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/6AF970F4-240C-4571-9998-1E19A9AE541F/Library/Cookies/Cookies.binarycookies
+2015-04-01 19:04:38.988 eMotion[33135:2520430] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-01 19:04:38.989 eMotion[33135:2520430] Multi-tasking -> Device: YES, App: YES
+2015-04-01 19:04:39.021 eMotion[33135:2520430] Unlimited access to network resources
+2015-04-01 19:04:40.303 eMotion[33135:2520430] [CDVTimer][statusbar] 291.363001ms
+2015-04-01 19:04:40.303 eMotion[33135:2520430] [CDVTimer][TotalPluginStartup] 291.624010ms
+2015-04-01 19:04:40.754 eMotion[33135:2520430] Resetting plugins due to page load.
+2015-04-01 19:04:41.790 eMotion[33135:2520430] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/A42A0C12-C85B-4C79-8DE0-01E6EF69C07C/eMotion.app/www/index.html#/tab/lists
+2015-04-01 19:10:16.956 eMotion[33385:2526252] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/163EE73A-535A-4075-9726-C411E46AB482/Library/Cookies/Cookies.binarycookies
+2015-04-01 19:10:17.170 eMotion[33385:2526252] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-01 19:10:17.170 eMotion[33385:2526252] Multi-tasking -> Device: YES, App: YES
+2015-04-01 19:10:17.173 eMotion[33385:2526252] Unlimited access to network resources
+2015-04-01 19:10:17.782 eMotion[33385:2526252] [CDVTimer][statusbar] 103.614986ms
+2015-04-01 19:10:17.782 eMotion[33385:2526252] [CDVTimer][TotalPluginStartup] 103.829980ms
+2015-04-01 19:10:17.991 eMotion[33385:2526252] Resetting plugins due to page load.
+2015-04-01 19:10:18.319 eMotion[33385:2526252] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/F1578A82-62C6-4001-9AE7-4F39189030D7/eMotion.app/www/index.html#/tab/lists
+2015-04-01 19:22:43.524 eMotion[33935:2535913] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/A3D39B6C-F2CC-4ED9-9892-0F78BFE1A529/Library/Cookies/Cookies.binarycookies
+2015-04-01 19:22:43.748 eMotion[33935:2535913] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-01 19:22:43.749 eMotion[33935:2535913] Multi-tasking -> Device: YES, App: YES
+2015-04-01 19:22:43.751 eMotion[33935:2535913] Unlimited access to network resources
+2015-04-01 19:22:44.332 eMotion[33935:2535913] [CDVTimer][statusbar] 72.876990ms
+2015-04-01 19:22:44.332 eMotion[33935:2535913] [CDVTimer][TotalPluginStartup] 73.392987ms
+2015-04-01 19:22:44.476 eMotion[33935:2535913] Resetting plugins due to page load.
+2015-04-01 19:22:44.827 eMotion[33935:2535913] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/0041CE0C-6B56-4751-B193-D059F3FB099B/eMotion.app/www/index.html#/tab/lists
+2015-04-01 19:23:14.299 eMotion[33935:2535913] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 2470951658_PortraitChoco_iPhone-Complex-Pad_Default
+2015-04-01 19:23:39.177 eMotion[33935:2535913] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 2470951658_PortraitChoco_iPhone-Complex-Pad_Default
+2015-04-01 19:48:54.062 eMotion[34796:2565317] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/3B1A32C1-C641-48CA-A9E1-D25A2AABC95C/Library/Cookies/Cookies.binarycookies
+2015-04-01 19:48:54.967 eMotion[34796:2565317] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-01 19:48:54.968 eMotion[34796:2565317] Multi-tasking -> Device: YES, App: YES
+2015-04-01 19:48:55.011 eMotion[34796:2565317] Unlimited access to network resources
+2015-04-01 19:48:56.125 eMotion[34796:2565317] [CDVTimer][statusbar] 241.935015ms
+2015-04-01 19:48:56.126 eMotion[34796:2565317] [CDVTimer][TotalPluginStartup] 242.350996ms
+2015-04-01 19:48:56.681 eMotion[34796:2565317] Resetting plugins due to page load.
+2015-04-01 19:48:57.343 eMotion[34796:2565317] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/781A045D-E673-46BB-931A-0FE6CE39372B/eMotion.app/www/index.html#/tab/lists
+2015-04-01 19:50:37.302 eMotion[34796:2565317] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 2470951658_PortraitChoco_iPhone-Complex-Pad_Default
+2015-04-01 19:53:25.343 eMotion[34989:2567783] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/D9A2382F-B597-4ECD-8EF4-77CC8C72D68E/Library/Cookies/Cookies.binarycookies
+2015-04-01 19:53:26.028 eMotion[34989:2567783] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-01 19:53:26.029 eMotion[34989:2567783] Multi-tasking -> Device: YES, App: YES
+2015-04-01 19:53:26.031 eMotion[34989:2567783] Unlimited access to network resources
+2015-04-01 19:53:26.725 eMotion[34989:2567783] [CDVTimer][statusbar] 64.395964ms
+2015-04-01 19:53:26.725 eMotion[34989:2567783] [CDVTimer][TotalPluginStartup] 64.698994ms
+2015-04-01 19:53:26.989 eMotion[34989:2567783] Resetting plugins due to page load.
+2015-04-01 19:53:27.392 eMotion[34989:2567783] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/5B9C14ED-7B27-4D13-9C39-577127ADAB9A/eMotion.app/www/index.html#/tab/lists
+2015-04-01 20:57:48.777 eMotion[34989:2594156] Terminating since there is no system app.
+2015-04-01 20:59:21.459 eMotion[35911:2595570] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/E488383A-0B07-4027-8C40-091F96EBB85F/Library/Cookies/Cookies.binarycookies
+2015-04-01 20:59:22.105 eMotion[35911:2595570] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-01 20:59:22.106 eMotion[35911:2595570] Multi-tasking -> Device: YES, App: YES
+2015-04-01 20:59:22.129 eMotion[35911:2595570] Unlimited access to network resources
+2015-04-01 20:59:23.546 eMotion[35911:2595570] [CDVTimer][statusbar] 272.279024ms
+2015-04-01 20:59:23.546 eMotion[35911:2595570] [CDVTimer][TotalPluginStartup] 272.543013ms
+2015-04-01 20:59:24.039 eMotion[35911:2595570] Resetting plugins due to page load.
+2015-04-01 20:59:24.675 eMotion[35911:2595570] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/221744C5-9AB0-43ED-A631-71121BB2B490/eMotion.app/www/index.html#/tab/lists
+2015-04-01 21:00:47.948 eMotion[36128:2596897] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/89ABB914-EC06-443E-9B62-3ABAD4DC377F/Library/Cookies/Cookies.binarycookies
+2015-04-01 21:00:48.175 eMotion[36128:2596897] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-01 21:00:48.175 eMotion[36128:2596897] Multi-tasking -> Device: YES, App: YES
+2015-04-01 21:00:48.181 eMotion[36128:2596897] Unlimited access to network resources
+2015-04-01 21:00:48.851 eMotion[36128:2596897] [CDVTimer][statusbar] 153.544009ms
+2015-04-01 21:00:48.851 eMotion[36128:2596897] [CDVTimer][TotalPluginStartup] 153.824985ms
+2015-04-01 21:00:49.183 eMotion[36128:2596897] Resetting plugins due to page load.
+2015-04-01 21:00:49.536 eMotion[36128:2596897] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/D650A56C-DA4C-499F-B297-589E81A41E80/eMotion.app/www/index.html#/tab/lists
+2015-04-01 21:07:06.548 eMotion[36360:2602449] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/E2BF4B20-A737-4E71-9584-5E81E59B9EB4/Library/Cookies/Cookies.binarycookies
+2015-04-01 21:07:06.766 eMotion[36360:2602449] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-01 21:07:06.767 eMotion[36360:2602449] Multi-tasking -> Device: YES, App: YES
+2015-04-01 21:07:06.770 eMotion[36360:2602449] Unlimited access to network resources
+2015-04-01 21:07:07.400 eMotion[36360:2602449] [CDVTimer][statusbar] 89.004040ms
+2015-04-01 21:07:07.400 eMotion[36360:2602449] [CDVTimer][TotalPluginStartup] 89.313030ms
+2015-04-01 21:07:07.721 eMotion[36360:2602449] Resetting plugins due to page load.
+2015-04-01 21:07:08.102 eMotion[36360:2602449] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/ED2AFF4E-217D-4598-B65E-792B8ACB8EC4/eMotion.app/www/index.html#/tab/lists
+2015-04-01 22:11:56.510 eMotion[36920:2658327] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/FC4D9D57-898B-4DE7-B2F2-0219527E26C7/Library/Cookies/Cookies.binarycookies
+2015-04-01 22:11:57.153 eMotion[36920:2658327] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-01 22:11:57.154 eMotion[36920:2658327] Multi-tasking -> Device: YES, App: YES
+2015-04-01 22:11:57.192 eMotion[36920:2658327] Unlimited access to network resources
+2015-04-01 22:11:58.276 eMotion[36920:2658327] [CDVTimer][statusbar] 225.848973ms
+2015-04-01 22:11:58.277 eMotion[36920:2658327] [CDVTimer][TotalPluginStartup] 226.086974ms
+2015-04-01 22:11:58.710 eMotion[36920:2658327] Resetting plugins due to page load.
+2015-04-01 22:11:59.459 eMotion[36920:2658327] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/0EB81FBB-FD12-4F29-AB9E-46A81F991085/eMotion.app/www/index.html#/tab/lists
+2015-04-01 22:12:00.453 eMotion[36920:2658327] THREAD WARNING: ['Device'] took '10.634033' ms. Plugin should use a background thread.
+2015-04-02 00:31:39.174 eMotion[38323:2769895] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/117ED9F9-C09F-4788-8EAE-76979C125FBC/Library/Cookies/Cookies.binarycookies
+2015-04-02 00:31:39.811 eMotion[38323:2769895] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-02 00:31:39.812 eMotion[38323:2769895] Multi-tasking -> Device: YES, App: YES
+2015-04-02 00:31:39.841 eMotion[38323:2769895] Unlimited access to network resources
+2015-04-02 00:31:41.264 eMotion[38323:2769895] [CDVTimer][statusbar] 265.924990ms
+2015-04-02 00:31:41.264 eMotion[38323:2769895] [CDVTimer][TotalPluginStartup] 266.164005ms
+2015-04-02 00:31:41.731 eMotion[38323:2769895] Resetting plugins due to page load.
+2015-04-02 00:31:43.018 eMotion[38323:2769895] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/A327287C-44C5-4DA5-B02E-72EF583D668C/eMotion.app/www/index.html#/tab/lists
+2015-04-02 13:39:44.617 eMotion[45100:2956496] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/68C5F33D-4154-48BB-8904-F126608B673F/Library/Cookies/Cookies.binarycookies
+2015-04-02 13:39:46.245 eMotion[45100:2956496] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-02 13:39:46.249 eMotion[45100:2956496] Multi-tasking -> Device: YES, App: YES
+2015-04-02 13:39:46.285 eMotion[45100:2956496] Unlimited access to network resources
+2015-04-02 13:39:47.948 eMotion[45100:2956496] [CDVTimer][statusbar] 426.075995ms
+2015-04-02 13:39:47.949 eMotion[45100:2956496] [CDVTimer][TotalPluginStartup] 426.638961ms
+2015-04-02 13:39:48.492 eMotion[45100:2956496] Resetting plugins due to page load.
+2015-04-02 13:39:49.110 eMotion[45100:2956496] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/5B2D3407-D08B-4FD4-9267-A7309947E61F/eMotion.app/www/index.html#/tab/lists
+2015-04-02 17:29:15.475 eMotion[1671:87492] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/968CAEEF-DFE8-438E-BA91-6324C6725C09/Library/Cookies/Cookies.binarycookies
+2015-04-02 17:29:15.831 eMotion[1671:87492] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-02 17:29:15.831 eMotion[1671:87492] Multi-tasking -> Device: YES, App: YES
+2015-04-02 17:29:15.855 eMotion[1671:87492] Unlimited access to network resources
+2015-04-02 17:29:16.752 eMotion[1671:87492] [CDVTimer][statusbar] 172.403991ms
+2015-04-02 17:29:16.752 eMotion[1671:87492] [CDVTimer][TotalPluginStartup] 172.626019ms
+2015-04-02 17:29:17.015 eMotion[1671:87492] Resetting plugins due to page load.
+2015-04-02 17:29:17.499 eMotion[1671:87492] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/0E5FE670-7503-4B4A-A469-2953DFBBC645/eMotion.app/www/index.html#/tab/lists
+2015-04-02 17:44:04.886 eMotion[1876:102581] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/A8F28E94-091B-4B65-89C6-DB2E8B13070C/Library/Cookies/Cookies.binarycookies
+2015-04-02 17:44:05.237 eMotion[1876:102581] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-02 17:44:05.238 eMotion[1876:102581] Multi-tasking -> Device: YES, App: YES
+2015-04-02 17:44:05.240 eMotion[1876:102581] Unlimited access to network resources
+2015-04-02 17:44:05.653 eMotion[1876:102581] [CDVTimer][statusbar] 34.736991ms
+2015-04-02 17:44:05.653 eMotion[1876:102581] [CDVTimer][TotalPluginStartup] 34.956038ms
+2015-04-02 17:44:05.852 eMotion[1876:102581] Resetting plugins due to page load.
+2015-04-02 17:44:06.085 eMotion[1876:102581] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/AA514C97-1572-4A36-A7BC-6FBE0BA97544/eMotion.app/www/index.html#/tab/lists
+2015-04-02 17:58:54.268 eMotion[2087:123063] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/1A70C544-A39F-46FF-BCEB-DC1385319048/Library/Cookies/Cookies.binarycookies
+2015-04-02 17:58:54.594 eMotion[2087:123063] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-02 17:58:54.595 eMotion[2087:123063] Multi-tasking -> Device: YES, App: YES
+2015-04-02 17:58:54.597 eMotion[2087:123063] Unlimited access to network resources
+2015-04-02 17:58:54.988 eMotion[2087:123063] [CDVTimer][statusbar] 32.373965ms
+2015-04-02 17:58:54.988 eMotion[2087:123063] [CDVTimer][TotalPluginStartup] 32.571018ms
+2015-04-02 17:58:55.167 eMotion[2087:123063] Resetting plugins due to page load.
+2015-04-02 17:58:55.429 eMotion[2087:123063] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/B3F79F9B-0249-46F4-92D8-C1C71E325B9C/eMotion.app/www/index.html#/tab/lists
+2015-04-02 19:08:26.741 eMotion[2444:168539] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/7EDCCC89-07F5-42B1-A5C4-0CAA1F0B3953/Library/Cookies/Cookies.binarycookies
+2015-04-02 19:08:27.220 eMotion[2444:168539] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-02 19:08:27.221 eMotion[2444:168539] Multi-tasking -> Device: YES, App: YES
+2015-04-02 19:08:27.222 eMotion[2444:168539] Unlimited access to network resources
+2015-04-02 19:08:27.646 eMotion[2444:168539] [CDVTimer][statusbar] 66.655993ms
+2015-04-02 19:08:27.646 eMotion[2444:168539] [CDVTimer][TotalPluginStartup] 66.852033ms
+2015-04-02 19:08:27.915 eMotion[2444:168539] Resetting plugins due to page load.
+2015-04-02 19:08:28.179 eMotion[2444:168539] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/38549E78-B3F0-4DDF-A285-B6F3DFC8BB57/eMotion.app/www/index.html#/tab/lists
+2015-04-02 19:12:05.033 eMotion[2624:171442] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/9F0961AB-0556-48FC-8502-475114292B54/Library/Cookies/Cookies.binarycookies
+2015-04-02 19:12:05.350 eMotion[2624:171442] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-02 19:12:05.350 eMotion[2624:171442] Multi-tasking -> Device: YES, App: YES
+2015-04-02 19:12:05.352 eMotion[2624:171442] Unlimited access to network resources
+2015-04-02 19:12:05.800 eMotion[2624:171442] [CDVTimer][statusbar] 42.264998ms
+2015-04-02 19:12:05.800 eMotion[2624:171442] [CDVTimer][TotalPluginStartup] 42.464972ms
+2015-04-02 19:12:06.087 eMotion[2624:171442] Resetting plugins due to page load.
+2015-04-02 19:12:06.358 eMotion[2624:171442] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/5B4ABFD7-39DA-4AA8-8652-13B6CDC5FE26/eMotion.app/www/index.html#/tab/lists
+2015-04-02 19:12:45.238 eMotion[2624:171442] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 2470951658_PortraitChoco_iPhone-Complex-Pad_Default
+2015-04-02 19:14:28.301 eMotion[2624:171442] Failed to load webpage with error: The URL can’t be shown
+2015-04-02 19:14:29.126 eMotion[2624:171442] Failed to load webpage with error: The URL can’t be shown
+2015-04-02 19:14:29.691 eMotion[2624:171442] Failed to load webpage with error: The URL can’t be shown
+2015-04-02 19:14:30.475 eMotion[2624:171442] Failed to load webpage with error: The URL can’t be shown
+2015-04-02 19:50:50.281 eMotion[2910:198476] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/DF59AAB2-FD2F-46F7-BC8F-FD20AA18617A/Library/Cookies/Cookies.binarycookies
+2015-04-02 19:50:50.644 eMotion[2910:198476] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-02 19:50:50.645 eMotion[2910:198476] Multi-tasking -> Device: YES, App: YES
+2015-04-02 19:50:50.647 eMotion[2910:198476] Unlimited access to network resources
+2015-04-02 19:50:51.051 eMotion[2910:198476] [CDVTimer][statusbar] 60.151994ms
+2015-04-02 19:50:51.051 eMotion[2910:198476] [CDVTimer][TotalPluginStartup] 60.331047ms
+2015-04-02 19:50:51.308 eMotion[2910:198476] Resetting plugins due to page load.
+2015-04-02 19:50:51.588 eMotion[2910:198476] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/88EDB6EC-7146-4642-8FA6-93F24AABDCBE/eMotion.app/www/index.html#/tab/lists
+2015-04-09 10:21:12.905 eMotion[8359:1066440] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/5E1C8352-A611-42A9-83F6-0FE3DC946FDA/Library/Cookies/Cookies.binarycookies
+2015-04-09 10:21:13.675 eMotion[8359:1066440] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-09 10:21:13.676 eMotion[8359:1066440] Multi-tasking -> Device: YES, App: YES
+2015-04-09 10:21:13.698 eMotion[8359:1066440] Unlimited access to network resources
+2015-04-09 10:21:14.702 eMotion[8359:1066440] [CDVTimer][statusbar] 144.205987ms
+2015-04-09 10:21:14.703 eMotion[8359:1066440] [CDVTimer][TotalPluginStartup] 144.429028ms
+2015-04-09 10:21:14.988 eMotion[8359:1066440] Resetting plugins due to page load.
+2015-04-09 10:21:15.411 eMotion[8359:1066440] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/77EB05F6-DA3C-4500-A35E-1A100E2D7743/eMotion.app/www/index.html#/tab/lists
+2015-04-09 10:21:36.562 eMotion[8572:1067665] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/9E3D3935-FE55-493C-AB08-7EAFA54712ED/Library/Cookies/Cookies.binarycookies
+2015-04-09 10:21:36.722 eMotion[8572:1067665] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-09 10:21:36.722 eMotion[8572:1067665] Multi-tasking -> Device: YES, App: YES
+2015-04-09 10:21:36.725 eMotion[8572:1067665] Unlimited access to network resources
+2015-04-09 10:21:37.434 eMotion[8572:1067665] [CDVTimer][statusbar] 22.965968ms
+2015-04-09 10:21:37.434 eMotion[8572:1067665] [CDVTimer][TotalPluginStartup] 23.158967ms
+2015-04-09 10:21:37.575 eMotion[8572:1067665] Resetting plugins due to page load.
+2015-04-09 10:21:37.905 eMotion[8572:1067665] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/DD09EF4A-5811-4D5E-A385-515441F34B44/eMotion.app/www/index.html#/tab/lists
+2015-04-10 19:35:30.604 eMotion[17846:1795230] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/64D3AB4A-8BC8-4011-A5CF-A5578F8B4DCB/Library/Cookies/Cookies.binarycookies
+2015-04-10 19:35:31.355 eMotion[17846:1795230] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-10 19:35:31.355 eMotion[17846:1795230] Multi-tasking -> Device: YES, App: YES
+2015-04-10 19:35:31.373 eMotion[17846:1795230] Unlimited access to network resources
+2015-04-10 19:35:32.290 eMotion[17846:1795230] [CDVTimer][statusbar] 174.923003ms
+2015-04-10 19:35:32.290 eMotion[17846:1795230] [CDVTimer][TotalPluginStartup] 175.218999ms
+2015-04-10 19:35:32.549 eMotion[17846:1795230] Resetting plugins due to page load.
+2015-04-10 19:35:32.952 eMotion[17846:1795230] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/C185FDD7-B82B-4C16-B46F-F40E093056A3/eMotion.app/www/index.html#/tab/lists
+2015-04-10 19:36:08.857 eMotion[18067:1796522] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/3D24BDA5-91FA-4DB9-8785-FBF84E980C0F/Library/Cookies/Cookies.binarycookies
+2015-04-10 19:36:09.019 eMotion[18067:1796522] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-10 19:36:09.019 eMotion[18067:1796522] Multi-tasking -> Device: YES, App: YES
+2015-04-10 19:36:09.022 eMotion[18067:1796522] Unlimited access to network resources
+2015-04-10 19:36:09.463 eMotion[18067:1796522] [CDVTimer][statusbar] 60.433030ms
+2015-04-10 19:36:09.464 eMotion[18067:1796522] [CDVTimer][TotalPluginStartup] 60.698032ms
+2015-04-10 19:36:09.674 eMotion[18067:1796522] Resetting plugins due to page load.
+2015-04-10 19:36:09.935 eMotion[18067:1796522] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/DF9845A8-B924-404F-A5C0-C3B7F5AF911B/eMotion.app/www/index.html#/tab/lists
+2015-04-10 19:36:14.572 eMotion[18067:1796522] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 2470951658_PortraitChoco_iPhone-Complex-Pad_Default
+2015-04-10 19:36:26.274 eMotion[18067:1796522] THREAD WARNING: ['Notification'] took '107.690674' ms. Plugin should use a background thread.
+2015-04-10 19:36:37.103 eMotion[18067:1796522] THREAD WARNING: ['Notification'] took '13.276855' ms. Plugin should use a background thread.
+2015-04-10 19:36:47.214 eMotion[18067:1796522] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 2470951658_PortraitChoco_iPhone-Complex-Pad_Default
+2015-04-10 19:37:03.665 eMotion[18067:1796522] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 2470951658_PortraitChoco_iPhone-Complex-Pad_Default
+2015-04-10 19:37:18.623 eMotion[18067:1796522] THREAD WARNING: ['Notification'] took '12.290771' ms. Plugin should use a background thread.
+2015-04-10 19:37:23.761 eMotion[18067:1796522] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 2470951658_PortraitChoco_iPhone-Complex-Pad_Default
+2015-04-10 19:37:26.535 eMotion[18067:1796522] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 2470951658_PortraitChoco_iPhone-Complex-Pad_Default
+2015-04-10 19:37:54.561 eMotion[18067:1796522] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 2470951658_PortraitChoco_iPhone-Complex-Pad_Default
+2015-04-10 19:39:16.725 eMotion[18067:1796522] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 2470951658_PortraitChoco_iPhone-Complex-Pad_Default
+2015-04-10 19:39:27.408 eMotion[18067:1796522] THREAD WARNING: ['Notification'] took '11.352051' ms. Plugin should use a background thread.
+2015-04-10 19:39:29.688 eMotion[18067:1796522] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 2470951658_PortraitChoco_iPhone-Complex-Pad_Default
+2015-04-10 19:39:31.810 eMotion[18067:1796522] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 2470951658_PortraitChoco_iPhone-Complex-Pad_Default
+2015-04-10 19:40:11.484 eMotion[18067:1796522] THREAD WARNING: ['Notification'] took '13.971924' ms. Plugin should use a background thread.
+2015-04-10 19:40:32.461 eMotion[18067:1796522] THREAD WARNING: ['Notification'] took '16.678223' ms. Plugin should use a background thread.
+2015-04-10 19:40:36.508 eMotion[18067:1796522] THREAD WARNING: ['Notification'] took '13.497314' ms. Plugin should use a background thread.
+2015-04-10 19:40:40.169 eMotion[18067:1796522] THREAD WARNING: ['Notification'] took '18.046143' ms. Plugin should use a background thread.
+2015-04-10 21:29:27.767 eMotion[18757:1806252] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/7CBC1E9D-0B5A-4CF0-9724-F3F48AA72E0F/Library/Cookies/Cookies.binarycookies
+2015-04-10 21:29:28.209 eMotion[18757:1806252] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-10 21:29:28.209 eMotion[18757:1806252] Multi-tasking -> Device: YES, App: YES
+2015-04-10 21:29:28.223 eMotion[18757:1806252] Unlimited access to network resources
+2015-04-10 21:29:29.135 eMotion[18757:1806252] [CDVTimer][statusbar] 219.682038ms
+2015-04-10 21:29:29.135 eMotion[18757:1806252] [CDVTimer][TotalPluginStartup] 219.910979ms
+2015-04-10 21:29:29.409 eMotion[18757:1806252] Resetting plugins due to page load.
+2015-04-10 21:29:29.803 eMotion[18757:1806252] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/7E7BFF04-3081-459F-A892-2C0CF4BE3859/eMotion.app/www/index.html#/tab/lists
+2015-04-10 21:30:32.184 eMotion[18928:1807363] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/19C931F5-1A9F-45B8-9B91-2E758E4404A1/Library/Cookies/Cookies.binarycookies
+2015-04-10 21:30:32.360 eMotion[18928:1807363] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-10 21:30:32.360 eMotion[18928:1807363] Multi-tasking -> Device: YES, App: YES
+2015-04-10 21:30:32.364 eMotion[18928:1807363] Unlimited access to network resources
+2015-04-10 21:30:32.803 eMotion[18928:1807363] [CDVTimer][statusbar] 66.528976ms
+2015-04-10 21:30:32.803 eMotion[18928:1807363] [CDVTimer][TotalPluginStartup] 66.706955ms
+2015-04-10 21:30:34.144 eMotion[18928:1807363] Resetting plugins due to page load.
+2015-04-10 21:30:34.705 eMotion[18928:1807363] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/B78BC002-741E-454C-9E98-0FCDFB0DFE4F/eMotion.app/www/index.html#/tab/lists
+2015-04-10 21:31:11.363 eMotion[19145:1808787] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/353AE483-E8AE-470D-A34F-9EB920E74231/Library/Cookies/Cookies.binarycookies
+2015-04-10 21:31:11.500 eMotion[19145:1808787] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-10 21:31:11.501 eMotion[19145:1808787] Multi-tasking -> Device: YES, App: YES
+2015-04-10 21:31:11.503 eMotion[19145:1808787] Unlimited access to network resources
+2015-04-10 21:31:11.902 eMotion[19145:1808787] [CDVTimer][statusbar] 66.382051ms
+2015-04-10 21:31:11.902 eMotion[19145:1808787] [CDVTimer][TotalPluginStartup] 66.569030ms
+2015-04-10 21:31:12.064 eMotion[19145:1808787] Resetting plugins due to page load.
+2015-04-10 21:31:12.316 eMotion[19145:1808787] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/28664501-1FD5-4140-8663-6D124E38FEB1/eMotion.app/www/index.html#/tab/lists
+2015-04-10 22:25:38.915 eMotion[19534:1853882] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/FCCE2B46-4E79-48EB-BC85-316025269EDB/Library/Cookies/Cookies.binarycookies
+2015-04-10 22:25:39.275 eMotion[19534:1853882] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-10 22:25:39.276 eMotion[19534:1853882] Multi-tasking -> Device: YES, App: YES
+2015-04-10 22:25:39.295 eMotion[19534:1853882] Unlimited access to network resources
+2015-04-10 22:25:40.187 eMotion[19534:1853882] [CDVTimer][statusbar] 178.664029ms
+2015-04-10 22:25:40.187 eMotion[19534:1853882] [CDVTimer][TotalPluginStartup] 178.869963ms
+2015-04-10 22:25:40.465 eMotion[19534:1853882] Resetting plugins due to page load.
+2015-04-10 22:25:40.845 eMotion[19534:1853882] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/0C436150-E0E3-4384-B331-685C5B91F817/eMotion.app/www/index.html#/tab/lists
+2015-04-10 22:26:26.556 eMotion[19534:1853882] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 2470951658_PortraitChoco_iPhone-Complex-Pad_Default
+2015-04-10 22:29:15.759 eMotion[19534:1853882] THREAD WARNING: ['Notification'] took '69.678711' ms. Plugin should use a background thread.
+2015-04-10 22:30:37.868 eMotion[19729:1857144] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/615CCBBE-3755-486E-8F80-473AA98F30EE/Library/Cookies/Cookies.binarycookies
+2015-04-10 22:30:38.086 eMotion[19729:1857144] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-10 22:30:38.087 eMotion[19729:1857144] Multi-tasking -> Device: YES, App: YES
+2015-04-10 22:30:38.089 eMotion[19729:1857144] Unlimited access to network resources
+2015-04-10 22:30:38.463 eMotion[19729:1857144] [CDVTimer][statusbar] 22.831023ms
+2015-04-10 22:30:38.463 eMotion[19729:1857144] [CDVTimer][TotalPluginStartup] 23.073971ms
+2015-04-10 22:30:38.569 eMotion[19729:1857144] Resetting plugins due to page load.
+2015-04-10 22:30:38.812 eMotion[19729:1857144] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/5CEAF158-97D9-4CC6-A241-336DB9FA7EE3/eMotion.app/www/index.html#/tab/lists
+2015-04-10 22:30:42.383 eMotion[19729:1857144] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 2470951658_PortraitChoco_iPhone-Complex-Pad_Default
+2015-04-10 22:30:56.032 eMotion[19729:1857144] THREAD WARNING: ['Notification'] took '21.116699' ms. Plugin should use a background thread.
+2015-04-10 22:32:12.649 eMotion[19913:1858601] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/48D65EE6-D3EF-4AFA-8086-DD730B7A1723/Library/Cookies/Cookies.binarycookies
+2015-04-10 22:32:12.796 eMotion[19913:1858601] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-10 22:32:12.796 eMotion[19913:1858601] Multi-tasking -> Device: YES, App: YES
+2015-04-10 22:32:12.799 eMotion[19913:1858601] Unlimited access to network resources
+2015-04-10 22:32:13.243 eMotion[19913:1858601] [CDVTimer][statusbar] 64.907968ms
+2015-04-10 22:32:13.244 eMotion[19913:1858601] [CDVTimer][TotalPluginStartup] 65.098047ms
+2015-04-10 22:32:13.364 eMotion[19913:1858601] Resetting plugins due to page load.
+2015-04-10 22:32:13.579 eMotion[19913:1858601] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/64E77930-7BBA-4C91-AFA5-129727F309A4/eMotion.app/www/index.html#/tab/lists
+2015-04-10 22:32:16.564 eMotion[19913:1858601] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 2470951658_PortraitChoco_iPhone-Complex-Pad_Default
+2015-04-10 22:32:30.278 eMotion[19913:1858601] THREAD WARNING: ['Notification'] took '33.135254' ms. Plugin should use a background thread.
+2015-04-10 22:53:40.913 eMotion[20298:1865936] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/0D655BC0-E558-4AF0-8657-07B95E629693/Library/Cookies/Cookies.binarycookies
+2015-04-10 22:53:41.038 eMotion[20298:1865936] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-10 22:53:41.038 eMotion[20298:1865936] Multi-tasking -> Device: YES, App: YES
+2015-04-10 22:53:41.040 eMotion[20298:1865936] Unlimited access to network resources
+2015-04-10 22:53:41.449 eMotion[20298:1865936] [CDVTimer][statusbar] 82.924962ms
+2015-04-10 22:53:41.449 eMotion[20298:1865936] [CDVTimer][TotalPluginStartup] 83.231032ms
+2015-04-10 22:53:41.613 eMotion[20298:1865936] Resetting plugins due to page load.
+2015-04-10 22:53:41.859 eMotion[20298:1865936] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/378E2B3C-8ACF-44CD-BD08-E991B9638DB1/eMotion.app/www/index.html#/tab/lists
+2015-04-10 22:54:18.251 eMotion[20298:1865936] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 2470951658_PortraitChoco_iPhone-Complex-Pad_Default
+2015-04-10 22:54:25.208 eMotion[20298:1865936] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 2470951658_PortraitChoco_iPhone-Complex-Pad_Default
+2015-04-10 22:55:25.167 eMotion[20484:1867278] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/4F5FFD7A-2526-4E00-A9B0-429BD05D8B5E/Library/Cookies/Cookies.binarycookies
+2015-04-10 22:55:25.288 eMotion[20484:1867278] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-10 22:55:25.288 eMotion[20484:1867278] Multi-tasking -> Device: YES, App: YES
+2015-04-10 22:55:25.290 eMotion[20484:1867278] Unlimited access to network resources
+2015-04-10 22:55:25.678 eMotion[20484:1867278] [CDVTimer][statusbar] 74.342012ms
+2015-04-10 22:55:25.678 eMotion[20484:1867278] [CDVTimer][TotalPluginStartup] 74.544013ms
+2015-04-10 22:55:25.830 eMotion[20484:1867278] Resetting plugins due to page load.
+2015-04-10 22:55:26.049 eMotion[20484:1867278] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/6C55C2E3-C5A4-4825-AF1E-20DD9CDA7D80/eMotion.app/www/index.html#/tab/lists
+2015-04-10 22:55:40.521 eMotion[20484:1867278] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 2470951658_PortraitChoco_iPhone-Complex-Pad_Default
+2015-04-10 22:55:47.112 eMotion[20484:1867278] THREAD WARNING: ['Notification'] took '146.588135' ms. Plugin should use a background thread.
+2015-04-10 22:55:51.928 eMotion[20484:1867278] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 2470951658_PortraitChoco_iPhone-Complex-Pad_Default
+2015-04-10 22:55:57.516 eMotion[20484:1867278] THREAD WARNING: ['Notification'] took '136.516113' ms. Plugin should use a background thread.
+2015-04-10 22:55:59.628 eMotion[20484:1867278] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 2470951658_PortraitChoco_iPhone-Complex-Pad_Default
+2015-04-10 22:56:16.414 eMotion[20484:1867278] THREAD WARNING: ['Notification'] took '13.385986' ms. Plugin should use a background thread.
+2015-04-10 22:56:20.868 eMotion[20484:1867278] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 2470951658_PortraitChoco_iPhone-Complex-Pad_Default
+2015-04-10 22:56:28.662 eMotion[20484:1867278] THREAD WARNING: ['Notification'] took '121.774902' ms. Plugin should use a background thread.
+2015-04-10 22:56:32.717 eMotion[20484:1867278] THREAD WARNING: ['Notification'] took '12.545898' ms. Plugin should use a background thread.
+2015-04-10 22:56:34.824 eMotion[20484:1867278] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 2470951658_PortraitChoco_iPhone-Complex-Pad_Default
+2015-04-10 22:56:50.531 eMotion[20484:1867278] THREAD WARNING: ['Notification'] took '11.309814' ms. Plugin should use a background thread.
+2015-04-10 22:57:03.999 eMotion[20484:1867278] THREAD WARNING: ['Notification'] took '10.298828' ms. Plugin should use a background thread.
+2015-04-10 22:57:41.953 eMotion[20484:1867278] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 2470951658_PortraitChoco_iPhone-Complex-Pad_Default
+2015-04-10 22:57:57.781 eMotion[20484:1867278] THREAD WARNING: ['Notification'] took '10.859131' ms. Plugin should use a background thread.
+2015-04-10 23:01:06.754 eMotion[20484:1867278] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 2470951658_PortraitChoco_iPhone-Complex-Pad_Default
+2015-04-10 23:01:31.423 eMotion[20484:1867278] THREAD WARNING: ['Notification'] took '17.153076' ms. Plugin should use a background thread.
+2015-04-10 23:01:38.494 eMotion[20484:1867278] THREAD WARNING: ['Notification'] took '10.459961' ms. Plugin should use a background thread.
+2015-04-10 23:01:50.841 eMotion[20484:1867278] THREAD WARNING: ['Notification'] took '11.744141' ms. Plugin should use a background thread.
+2015-04-10 23:07:22.115 eMotion[20484:1867278] THREAD WARNING: ['Notification'] took '14.122070' ms. Plugin should use a background thread.
+2015-04-13 10:27:01.712 eMotion[27205:2057041] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/2E23BADD-7208-4519-A24C-E6AB766B5A41/Library/Cookies/Cookies.binarycookies
+2015-04-13 10:27:02.104 eMotion[27205:2057041] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-13 10:27:02.105 eMotion[27205:2057041] Multi-tasking -> Device: YES, App: YES
+2015-04-13 10:27:02.122 eMotion[27205:2057041] Unlimited access to network resources
+2015-04-13 10:27:03.037 eMotion[27205:2057041] [CDVTimer][statusbar] 206.673980ms
+2015-04-13 10:27:03.037 eMotion[27205:2057041] [CDVTimer][wechat] 0.065029ms
+2015-04-13 10:27:03.037 eMotion[27205:2057041] [CDVTimer][TotalPluginStartup] 207.283020ms
+2015-04-13 10:27:03.272 eMotion[27205:2057041] Register wechat app: wxd930ea5d5a258f4f
+2015-04-13 10:27:03.583 eMotion[27205:2057041] Resetting plugins due to page load.
+2015-04-13 10:27:03.959 eMotion[27205:2057041] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/A92792D3-D733-43F3-90CF-65D69D669D29/eMotion.app/www/index.html#/tab/lists
+2015-04-13 10:27:28.536 eMotion[27430:2058400] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/12C6B3DD-32F5-459B-8760-A980F1E7C311/Library/Cookies/Cookies.binarycookies
+2015-04-13 10:27:28.689 eMotion[27430:2058400] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-13 10:27:28.689 eMotion[27430:2058400] Multi-tasking -> Device: YES, App: YES
+2015-04-13 10:27:28.692 eMotion[27430:2058400] Unlimited access to network resources
+2015-04-13 10:27:29.119 eMotion[27430:2058400] [CDVTimer][statusbar] 78.016043ms
+2015-04-13 10:27:29.119 eMotion[27430:2058400] [CDVTimer][wechat] 0.043988ms
+2015-04-13 10:27:29.120 eMotion[27430:2058400] [CDVTimer][TotalPluginStartup] 78.427017ms
+2015-04-13 10:27:29.180 eMotion[27430:2058400] Register wechat app: wxd930ea5d5a258f4f
+2015-04-13 10:27:29.348 eMotion[27430:2058400] Resetting plugins due to page load.
+2015-04-13 10:27:29.699 eMotion[27430:2058400] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/CCB20562-431B-4A99-A944-C9F7B2CE05AE/eMotion.app/www/index.html#/tab/lists
+2015-04-13 10:28:19.756 eMotion[27618:2059393] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/323AAE23-C5CA-441B-809B-272CF7973CE7/Library/Cookies/Cookies.binarycookies
+2015-04-13 10:28:19.891 eMotion[27618:2059393] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-13 10:28:19.891 eMotion[27618:2059393] Multi-tasking -> Device: YES, App: YES
+2015-04-13 10:28:19.893 eMotion[27618:2059393] Unlimited access to network resources
+2015-04-13 10:28:20.368 eMotion[27618:2059393] [CDVTimer][statusbar] 81.965983ms
+2015-04-13 10:28:20.368 eMotion[27618:2059393] [CDVTimer][wechat] 0.056028ms
+2015-04-13 10:28:20.368 eMotion[27618:2059393] [CDVTimer][TotalPluginStartup] 82.400024ms
+2015-04-13 10:28:20.400 eMotion[27618:2059393] Register wechat app: wxd930ea5d5a258f4f
+2015-04-13 10:28:20.596 eMotion[27618:2059393] Resetting plugins due to page load.
+2015-04-13 10:28:20.819 eMotion[27618:2059393] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/65F0047E-6F90-4561-AF3E-DD5CEF793429/eMotion.app/www/index.html#/tab/lists
+2015-04-13 10:28:47.162 eMotion[27797:2060285] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/1950532E-FE07-4F4A-AA0D-7F5BC33F76C4/Library/Cookies/Cookies.binarycookies
+2015-04-13 10:28:47.283 eMotion[27797:2060285] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-13 10:28:47.283 eMotion[27797:2060285] Multi-tasking -> Device: YES, App: YES
+2015-04-13 10:28:47.285 eMotion[27797:2060285] Unlimited access to network resources
+2015-04-13 10:28:47.658 eMotion[27797:2060285] [CDVTimer][statusbar] 52.128017ms
+2015-04-13 10:28:47.658 eMotion[27797:2060285] [CDVTimer][wechat] 0.039995ms
+2015-04-13 10:28:47.658 eMotion[27797:2060285] [CDVTimer][TotalPluginStartup] 52.462995ms
+2015-04-13 10:28:47.687 eMotion[27797:2060285] Register wechat app: wxd930ea5d5a258f4f
+2015-04-13 10:28:47.843 eMotion[27797:2060285] Resetting plugins due to page load.
+2015-04-13 10:28:48.089 eMotion[27797:2060285] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/CB5CCDC3-EC98-4A7A-9A10-97559357A885/eMotion.app/www/index.html#/tab/lists
+2015-04-13 10:31:42.362 eMotion[27982:2061764] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/F5876527-6B68-41BD-8444-41303A6E81CD/Library/Cookies/Cookies.binarycookies
+2015-04-13 10:31:42.497 eMotion[27982:2061764] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-13 10:31:42.498 eMotion[27982:2061764] Multi-tasking -> Device: YES, App: YES
+2015-04-13 10:31:42.500 eMotion[27982:2061764] Unlimited access to network resources
+2015-04-13 10:31:42.913 eMotion[27982:2061764] [CDVTimer][statusbar] 66.825032ms
+2015-04-13 10:31:42.913 eMotion[27982:2061764] [CDVTimer][wechat] 0.061989ms
+2015-04-13 10:31:42.913 eMotion[27982:2061764] [CDVTimer][TotalPluginStartup] 67.370951ms
+2015-04-13 10:31:43.029 eMotion[27982:2061764] Register wechat app: wxd930ea5d5a258f4f
+2015-04-13 10:31:43.218 eMotion[27982:2061764] Resetting plugins due to page load.
+2015-04-13 10:31:43.485 eMotion[27982:2061764] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/53C325E7-6E51-4AE6-AF07-952312273871/eMotion.app/www/index.html#/tab/lists
+2015-04-13 10:32:03.894 eMotion[28166:2062606] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/75CBD015-1EE0-480C-B396-C58BF043701A/Library/Cookies/Cookies.binarycookies
+2015-04-13 10:32:04.035 eMotion[28166:2062606] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-13 10:32:04.035 eMotion[28166:2062606] Multi-tasking -> Device: YES, App: YES
+2015-04-13 10:32:04.037 eMotion[28166:2062606] Unlimited access to network resources
+2015-04-13 10:32:04.637 eMotion[28166:2062606] [CDVTimer][statusbar] 98.842025ms
+2015-04-13 10:32:04.637 eMotion[28166:2062606] [CDVTimer][wechat] 0.059009ms
+2015-04-13 10:32:04.637 eMotion[28166:2062606] [CDVTimer][TotalPluginStartup] 99.359989ms
+2015-04-13 10:32:04.677 eMotion[28166:2062606] Register wechat app: wxd930ea5d5a258f4f
+2015-04-13 10:32:04.933 eMotion[28166:2062606] Resetting plugins due to page load.
+2015-04-13 10:32:05.198 eMotion[28166:2062606] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/528B7F3D-D3C4-4826-BD85-BE9ECC9FB07C/eMotion.app/www/index.html#/tab/lists
+2015-04-13 10:35:49.855 eMotion[28354:2064598] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/51B6BEA2-5C9F-4E12-B8AD-441C3B2D1BC6/Library/Cookies/Cookies.binarycookies
+2015-04-13 10:35:49.986 eMotion[28354:2064598] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-13 10:35:49.987 eMotion[28354:2064598] Multi-tasking -> Device: YES, App: YES
+2015-04-13 10:35:49.989 eMotion[28354:2064598] Unlimited access to network resources
+2015-04-13 10:35:50.429 eMotion[28354:2064598] [CDVTimer][statusbar] 79.958022ms
+2015-04-13 10:35:50.429 eMotion[28354:2064598] [CDVTimer][wechat] 0.038981ms
+2015-04-13 10:35:50.429 eMotion[28354:2064598] [CDVTimer][TotalPluginStartup] 80.321968ms
+2015-04-13 10:35:50.555 eMotion[28354:2064598] Register wechat app: wxd930ea5d5a258f4f
+2015-04-13 10:35:50.695 eMotion[28354:2064598] Resetting plugins due to page load.
+2015-04-13 10:35:50.959 eMotion[28354:2064598] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/A1164EA9-390F-4852-89EB-23C939D9B4CC/eMotion.app/www/index.html#/tab/lists
+2015-04-13 10:55:42.769 eMotion[28593:2073582] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/15543F1B-39CE-4E96-8B96-36210016A2DC/Library/Cookies/Cookies.binarycookies
+2015-04-13 10:55:42.920 eMotion[28593:2073582] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-13 10:55:42.921 eMotion[28593:2073582] Multi-tasking -> Device: YES, App: YES
+2015-04-13 10:55:42.923 eMotion[28593:2073582] Unlimited access to network resources
+2015-04-13 10:55:43.404 eMotion[28593:2073582] [CDVTimer][statusbar] 92.312992ms
+2015-04-13 10:55:43.404 eMotion[28593:2073582] [CDVTimer][wechat] 0.048995ms
+2015-04-13 10:55:43.405 eMotion[28593:2073582] [CDVTimer][TotalPluginStartup] 92.725039ms
+2015-04-13 10:55:43.526 eMotion[28593:2073582] Register wechat app: wxd930ea5d5a258f4f
+2015-04-13 10:55:43.750 eMotion[28593:2073582] Resetting plugins due to page load.
+2015-04-13 10:55:43.968 eMotion[28593:2073582] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/92D3094B-6958-4DA9-89BC-8B12379E6F04/eMotion.app/www/index.html#/tab/lists
+2015-04-13 10:56:02.489 eMotion[28593:2073582] THREAD WARNING: ['Wechat'] took '11440.209229' ms. Plugin should use a background thread.
+2015-04-13 10:56:02.497 eMotion[28593:2073631] void SendDelegateMessage(NSInvocation *): delegate (webView:decidePolicyForNavigationAction:request:frame:decisionListener:) failed to return after waiting 10 seconds. main run loop mode: kCFRunLoopDefaultMode
+2015-04-13 10:56:10.237 eMotion[28593:2073582] THREAD WARNING: ['Wechat'] took '5210.211182' ms. Plugin should use a background thread.
+2015-04-13 11:08:25.555 eMotion[29009:2082345] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/F5917250-65AE-46CE-BA0B-D866996ECACB/Library/Cookies/Cookies.binarycookies
+2015-04-13 11:08:25.714 eMotion[29009:2082345] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-13 11:08:25.715 eMotion[29009:2082345] Multi-tasking -> Device: YES, App: YES
+2015-04-13 11:08:25.716 eMotion[29009:2082345] Unlimited access to network resources
+2015-04-13 11:08:26.221 eMotion[29009:2082345] [CDVTimer][statusbar] 88.333011ms
+2015-04-13 11:08:26.221 eMotion[29009:2082345] [CDVTimer][wechat] 0.038981ms
+2015-04-13 11:08:26.221 eMotion[29009:2082345] [CDVTimer][TotalPluginStartup] 88.683963ms
+2015-04-13 11:08:26.336 eMotion[29009:2082345] Register wechat app: wxd930ea5d5a258f4f
+2015-04-13 11:08:26.537 eMotion[29009:2082345] Resetting plugins due to page load.
+2015-04-13 11:08:26.782 eMotion[29009:2082345] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/C756FB03-6B28-41A3-8DBE-7226303C3C3D/eMotion.app/www/index.html#/tab/lists
+2015-04-13 11:25:27.049 eMotion[29424:2096636] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/134A7343-D61B-4563-8B48-888CC8B41916/Library/Cookies/Cookies.binarycookies
+2015-04-13 11:25:27.227 eMotion[29424:2096636] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-13 11:25:27.228 eMotion[29424:2096636] Multi-tasking -> Device: YES, App: YES
+2015-04-13 11:25:27.230 eMotion[29424:2096636] Unlimited access to network resources
+2015-04-13 11:25:27.784 eMotion[29424:2096636] [CDVTimer][statusbar] 96.240044ms
+2015-04-13 11:25:27.785 eMotion[29424:2096636] [CDVTimer][wechat] 0.065982ms
+2015-04-13 11:25:27.785 eMotion[29424:2096636] [CDVTimer][TotalPluginStartup] 96.810997ms
+2015-04-13 11:25:27.936 eMotion[29424:2096636] Register wechat app: wxd930ea5d5a258f4f
+2015-04-13 11:25:28.168 eMotion[29424:2096636] Resetting plugins due to page load.
+2015-04-13 11:25:28.467 eMotion[29424:2096636] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/AE806600-6DB6-41B6-ACF0-84E4C869FE55/eMotion.app/www/index.html#/tab/lists
+2015-04-13 11:52:09.548 eMotion[29873:2112100] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/070AB2EC-8280-4B21-AC83-6055D7EF85C3/Library/Cookies/Cookies.binarycookies
+2015-04-13 11:52:09.702 eMotion[29873:2112100] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-13 11:52:09.703 eMotion[29873:2112100] Multi-tasking -> Device: YES, App: YES
+2015-04-13 11:52:09.705 eMotion[29873:2112100] Unlimited access to network resources
+2015-04-13 11:52:10.216 eMotion[29873:2112100] [CDVTimer][statusbar] 89.736044ms
+2015-04-13 11:52:10.216 eMotion[29873:2112100] [CDVTimer][wechat] 0.064969ms
+2015-04-13 11:52:10.216 eMotion[29873:2112100] [CDVTimer][TotalPluginStartup] 90.265989ms
+2015-04-13 11:52:10.406 eMotion[29873:2112100] Register wechat app: wxd930ea5d5a258f4f
+2015-04-13 11:52:10.609 eMotion[29873:2112100] Resetting plugins due to page load.
+2015-04-13 11:52:10.872 eMotion[29873:2112100] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/B06FB4DC-5881-4714-ABF6-A06223A37F34/eMotion.app/www/index.html#/tab/lists
+2015-04-13 15:59:43.870 eMotion[31835:2292339] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/DB0A6B6D-5BF4-4193-8AE8-3401A9EC337C/Library/Cookies/Cookies.binarycookies
+2015-04-13 15:59:44.265 eMotion[31835:2292339] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-13 15:59:44.266 eMotion[31835:2292339] Multi-tasking -> Device: YES, App: YES
+2015-04-13 15:59:44.290 eMotion[31835:2292339] Unlimited access to network resources
+2015-04-13 15:59:45.262 eMotion[31835:2292339] [CDVTimer][statusbar] 183.647037ms
+2015-04-13 15:59:45.263 eMotion[31835:2292339] [CDVTimer][wechat] 0.052989ms
+2015-04-13 15:59:45.263 eMotion[31835:2292339] [CDVTimer][TotalPluginStartup] 184.966981ms
+2015-04-13 15:59:45.442 eMotion[31835:2292339] Register wechat app: wxd930ea5d5a258f4f
+2015-04-13 15:59:45.732 eMotion[31835:2292339] Resetting plugins due to page load.
+2015-04-13 15:59:46.045 eMotion[31835:2292339] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/6452733F-4B4E-499F-8BB1-28F972CA4C0D/eMotion.app/www/index.html#/tab/lists
+2015-04-13 15:59:56.747 eMotion[31835:2292339] THREAD WARNING: ['Wechat'] took '4724.974121' ms. Plugin should use a background thread.
+2015-04-13 16:01:39.839 eMotion[32027:2293745] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/C908D98B-1D07-4026-B0FD-98B2259A24E1/Library/Cookies/Cookies.binarycookies
+2015-04-13 16:01:40.067 eMotion[32027:2293745] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-13 16:01:40.068 eMotion[32027:2293745] Multi-tasking -> Device: YES, App: YES
+2015-04-13 16:01:40.072 eMotion[32027:2293745] Unlimited access to network resources
+2015-04-13 16:01:40.591 eMotion[32027:2293745] [CDVTimer][statusbar] 100.423038ms
+2015-04-13 16:01:40.591 eMotion[32027:2293745] [CDVTimer][wechat] 0.046015ms
+2015-04-13 16:01:40.591 eMotion[32027:2293745] [CDVTimer][TotalPluginStartup] 100.903988ms
+2015-04-13 16:01:40.812 eMotion[32027:2293745] Register wechat app: wxd930ea5d5a258f4f
+2015-04-13 16:01:41.078 eMotion[32027:2293745] Resetting plugins due to page load.
+2015-04-13 16:01:41.353 eMotion[32027:2293745] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/BEC367A9-BD16-4568-AC72-1AB60356056B/eMotion.app/www/index.html#/tab/lists
+2015-04-13 16:06:24.920 eMotion[32027:2293745] THREAD WARNING: ['Notification'] took '51.055908' ms. Plugin should use a background thread.
+2015-04-13 16:06:45.700 eMotion[32027:2293745] THREAD WARNING: ['Notification'] took '17.479736' ms. Plugin should use a background thread.
+2015-04-13 16:06:55.563 eMotion[32027:2293745] THREAD WARNING: ['Notification'] took '28.876953' ms. Plugin should use a background thread.
+2015-04-14 10:18:07.886 eMotion[33857:2511367] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/F6074123-8969-4451-93A9-79470AC3F141/Library/Cookies/Cookies.binarycookies
+2015-04-14 10:18:08.436 eMotion[33857:2511367] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-14 10:18:08.436 eMotion[33857:2511367] Multi-tasking -> Device: YES, App: YES
+2015-04-14 10:18:08.454 eMotion[33857:2511367] Unlimited access to network resources
+2015-04-14 10:18:08.936 eMotion[33857:2511367] [CDVTimer][statusbar] 88.301003ms
+2015-04-14 10:18:08.937 eMotion[33857:2511367] [CDVTimer][wechat] 0.055015ms
+2015-04-14 10:18:08.937 eMotion[33857:2511367] [CDVTimer][TotalPluginStartup] 89.836001ms
+2015-04-14 10:18:09.096 eMotion[33857:2511367] Register wechat app: wxd930ea5d5a258f4f
+2015-04-14 10:18:09.393 eMotion[33857:2511367] Resetting plugins due to page load.
+2015-04-14 10:18:09.675 eMotion[33857:2511367] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/3BAB58C7-9D63-4832-BC8A-79DA775EB414/eMotion.app/www/index.html#/tab/lists
+2015-04-14 11:44:41.671 eMotion[33857:2511367] THREAD WARNING: ['Notification'] took '138.454102' ms. Plugin should use a background thread.
+2015-04-20 17:00:54.776 eMotion[3410:178901] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/95C22D02-2615-44F2-95A9-C847C2743B4E/Library/Cookies/Cookies.binarycookies
+2015-04-20 17:00:55.106 eMotion[3410:178901] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-20 17:00:55.107 eMotion[3410:178901] Multi-tasking -> Device: YES, App: YES
+2015-04-20 17:00:55.130 eMotion[3410:178901] Unlimited access to network resources
+2015-04-20 17:00:56.083 eMotion[3410:178901] [CDVTimer][statusbar] 196.093023ms
+2015-04-20 17:00:56.083 eMotion[3410:178901] [CDVTimer][wechat] 0.066042ms
+2015-04-20 17:00:56.083 eMotion[3410:178901] [CDVTimer][TotalPluginStartup] 196.547985ms
+2015-04-20 17:00:56.193 eMotion[3410:178901] Register wechat app: wxed2e6c3159414ee7
+2015-04-20 17:00:56.446 eMotion[3410:178901] Resetting plugins due to page load.
+2015-04-20 17:00:56.859 eMotion[3410:178901] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/3B9F7F76-7644-4A16-B3F0-977BD5D96E92/eMotion.app/www/index.html#/tab/lists
+2015-04-20 17:04:00.404 eMotion[3600:180939] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/3E19DDE1-AE4B-4DAD-9053-87AD10C4E725/Library/Cookies/Cookies.binarycookies
+2015-04-20 17:04:00.589 eMotion[3600:180939] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-20 17:04:00.589 eMotion[3600:180939] Multi-tasking -> Device: YES, App: YES
+2015-04-20 17:04:00.591 eMotion[3600:180939] Unlimited access to network resources
+2015-04-20 17:04:00.925 eMotion[3600:180939] [CDVTimer][statusbar] 23.238957ms
+2015-04-20 17:04:00.925 eMotion[3600:180939] [CDVTimer][wechat] 0.042975ms
+2015-04-20 17:04:00.926 eMotion[3600:180939] [CDVTimer][TotalPluginStartup] 23.601949ms
+2015-04-20 17:04:00.984 eMotion[3600:180939] Register wechat app: wxed2e6c3159414ee7
+2015-04-20 17:04:01.077 eMotion[3600:180939] Resetting plugins due to page load.
+2015-04-20 17:04:01.278 eMotion[3600:180939] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/E7ECA969-DC8A-492D-A1CC-47AEB5AD99CD/eMotion.app/www/index.html#/tab/lists
+2015-04-20 17:20:31.037 eMotion[3600:180939] THREAD WARNING: ['Notification'] took '67.446045' ms. Plugin should use a background thread.
+2015-04-20 18:27:44.423 eMotion[6577:288764] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/58ABF484-46C8-4319-A76A-400B35FEFF6C/Library/Cookies/Cookies.binarycookies
+2015-04-20 18:27:44.621 eMotion[6577:288764] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-20 18:27:44.622 eMotion[6577:288764] Multi-tasking -> Device: YES, App: YES
+2015-04-20 18:27:44.624 eMotion[6577:288764] Unlimited access to network resources
+2015-04-20 18:27:45.115 eMotion[6577:288764] [CDVTimer][statusbar] 91.670990ms
+2015-04-20 18:27:45.115 eMotion[6577:288764] [CDVTimer][wechat] 0.065982ms
+2015-04-20 18:27:45.116 eMotion[6577:288764] [CDVTimer][TotalPluginStartup] 92.083037ms
+2015-04-20 18:27:45.264 eMotion[6577:288764] Register wechat app: wxed2e6c3159414ee7
+2015-04-20 18:27:45.463 eMotion[6577:288764] Resetting plugins due to page load.
+2015-04-20 18:27:45.565 eMotion[6577:288764] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/91622153-E88F-4404-8A7C-973F0322AEC7/eMotion.app/www/index.html
+2015-04-20 18:31:18.370 eMotion[6878:294319] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/8845C190-0E63-4FF1-BB1A-B92B9606F0B3/Library/Cookies/Cookies.binarycookies
+2015-04-20 18:31:18.547 eMotion[6878:294319] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-20 18:31:18.547 eMotion[6878:294319] Multi-tasking -> Device: YES, App: YES
+2015-04-20 18:31:18.549 eMotion[6878:294319] Unlimited access to network resources
+2015-04-20 18:31:18.962 eMotion[6878:294319] [CDVTimer][statusbar] 101.169050ms
+2015-04-20 18:31:18.962 eMotion[6878:294319] [CDVTimer][wechat] 0.038028ms
+2015-04-20 18:31:18.962 eMotion[6878:294319] [CDVTimer][TotalPluginStartup] 101.517022ms
+2015-04-20 18:31:19.099 eMotion[6878:294319] Register wechat app: wxed2e6c3159414ee7
+2015-04-20 18:31:19.262 eMotion[6878:294319] Resetting plugins due to page load.
+2015-04-20 18:31:19.463 eMotion[6878:294319] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/4E0CC146-E259-4E68-8B71-A3721CB2B1AC/eMotion.app/www/index.html#/tab/lists
+2015-04-20 18:31:26.393 eMotion[6878:294319] THREAD WARNING: ['Notification'] took '47.489990' ms. Plugin should use a background thread.
+2015-04-20 18:45:38.308 eMotion[7207:305965] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Data/Application/E9EF5D75-57FD-4422-A21F-B3619676F4DD/Library/Cookies/Cookies.binarycookies
+2015-04-20 18:45:38.484 eMotion[7207:305965] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-20 18:45:38.484 eMotion[7207:305965] Multi-tasking -> Device: YES, App: YES
+2015-04-20 18:45:38.486 eMotion[7207:305965] Unlimited access to network resources
+2015-04-20 18:45:38.965 eMotion[7207:305965] [CDVTimer][statusbar] 133.766949ms
+2015-04-20 18:45:38.965 eMotion[7207:305965] [CDVTimer][wechat] 0.047028ms
+2015-04-20 18:45:38.965 eMotion[7207:305965] [CDVTimer][TotalPluginStartup] 134.166002ms
+2015-04-20 18:45:39.147 eMotion[7207:305965] Register wechat app: wxed2e6c3159414ee7
+2015-04-20 18:45:39.325 eMotion[7207:305965] Resetting plugins due to page load.
+2015-04-20 18:45:39.535 eMotion[7207:305965] Finished load of: file:///Users/yuyin/Library/Developer/CoreSimulator/Devices/CD465473-4A53-4A2B-BBD8-FC9E0438A08B/data/Containers/Bundle/Application/11A3D944-8BC8-402A-A480-690C5645D8DF/eMotion.app/www/index.html#/tab/lists

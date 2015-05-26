@@ -1,0 +1,26 @@
+<ion-view  view-title="使用手机号登录">
+  <ion-nav-buttons >
+  <a class="button button-clear" ng-show="$root.CustomDatas.showBackAction" ng-click="goBack()" ng-controller="BackAction">取消</a>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="secondary">
+  <a class="button button-clear " href="#admin/register">注册</a>
+  </ion-nav-buttons>
+  <ion-content class="padding">
+    <ion-list>
+    <form name="login_form" class="emotion-form" ng-submit="login(login_form)">
+      <ion-item class="item-input" ng-class="{error:login_form.phone.$invalid &&login_form.$submitted}">
+      <input name="phone" ng-model="formData.phone" type="tel" placeholder="请填写手机号码" required>
+      </ion-item>
+      <ion-item class="item-input" ng-class="{error:login_form.pw.$invalid &&login_form.$submitted}">
+        <input name="pw" ng-model="formData.pw" type="password" placeholder="请填写密码" required>
+      </ion-item>
+      <button type="submit" class="button button-block button-energized" ng-class="{disabled:login_form.$invalid}">
+        登录
+      </button>
+      <!--<p style="text-align:right" class="positive">-->
+        <!--<a class="emotion-forget" style="right" ng-href="#/tab/contact">忘记密码？</a>-->
+      <!--</p>-->
+    </form>
+    </ion-list>
+  </ion-content>
+</ion-view>

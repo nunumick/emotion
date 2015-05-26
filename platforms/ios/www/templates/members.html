@@ -1,0 +1,19 @@
+<ion-view>
+  <ion-nav-title>
+  已报名({{listNums}})
+  </ion-nav-title>
+  <ion-content>
+    <ion-refresher on-refresh="refresh()"></ion-refresher>
+    <ion-list>
+    <ion-item  class="item-remove-animate item-avatar" ng-repeat="list in lists" type="item-text-wrap">
+        <img ng-src="img/user_icon_180.png">
+        <h2>{{list.nick}}</h2>
+        <p ng-if="list.phonenum">tel:{{list.phonenum}}</p>
+        <ion-option-button ng-if="list.phonenum" class="button-assertive" ng-click="remove(list)">
+        剔除
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
+

@@ -1,0 +1,26 @@
+<ion-view view-title="注册">
+  <!--<ion-nav-buttons >-->
+  <!--<a class="button button-clear" ng-click="goBack()">取消</a>-->
+  <!--</ion-nav-buttons>-->
+  <ion-content class="padding">
+    <form name="register_form" class="emotion-form" ng-submit="register(register_form)">
+    <ion-list>
+      <ion-item class="item-input" ng-class="{error:register_form.phone.$invalid &&register_form.$submitted}">
+      <input name="phone" type="tel" ng-model="formData.phone" placeholder="请填写手机号码" required>
+      </ion-item>
+    </ion-list>
+    <ion-list class="padding">
+      <ion-item class="item-input" ng-class="{error:register_form.pw.$invalid &&register_form.$submitted}">
+        <input name="pw" type="password" ng-model="formData.pw" placeholder="请填写密码" required>
+      </ion-item>
+      <ion-item class="item-input" ng-class="{error:register_form.pwcheck.$invalid &&register_form.$submitted}">
+        <input name="pwcheck" type="password" ng-model="formData.pwcheck" placeholder="请再次填写密码" required>
+      </ion-item>
+      <button type="submit" class="button button-block button-energized" ng-class="{disabled:register_form.$invalid}">
+        注册
+      </button>
+    </ion-list>
+    </form>
+  </ion-content>
+</ion-view>
+

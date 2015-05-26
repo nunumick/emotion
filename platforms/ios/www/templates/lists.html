@@ -1,0 +1,35 @@
+<ion-view cache-view="true">
+  <ion-nav-title>
+  {{title}}({{listNums}})
+  </ion-nav-title>
+  <ion-nav-buttons side="secondary">
+  <a class="button button-small button-icon icon ion-ios7-plus-empty" ng-controller="CreateCtrl" ng-click="show()"></a>
+  </ion-nav-buttons>
+  <ion-content>
+    <ion-refresher on-refresh="refresh()"></ion-refresher>
+    <ion-list>
+    <ion-item class="notice-bar dark item-icon-left hide" ng-class="{show:$root.CustomDatas.offline}">
+       <i class="icon ion-alert-circled assertive"></i>
+      网络连接失败，请检查你的网络设置
+    </ion-item>
+    <ion-item ng-class="{'item-remove-animate':del}" class="item-thumbnail-left item-icon-right" ng-repeat="list in lists" type="item-text-wrap" href="#/tab/{{path}}/{{list.aid}}">
+      <img ng-src="{{list.resource.rpic ? ($root.CustomDatas.host + list.resource.rpic) : 'img/emotion-icon.png'}}">
+      <h2>{{list.name||'无主题'}}</h2>
+      <p>
+        已报:{{list.csize}}, 剩余:{{list.allsize-list.csize}}
+        <span class="emotion-status">
+        <span class="balanced" ng-show="list.actstatus==1">报名中</span>
+        <span class="energized" ng-show="list.actstatus==2">已结束</span>
+        <span class="stable" ng-show="list.actstatus==3">已失效</span>
+        </span>
+      </p>
+      <p>开始时间:{{list.start}}</p>
+      <i class="icon ion-chevron-right icon-accessory"></i>
+      <ion-option-button ng-if="$parent.del" class="button-assertive" ng-click="remove(list)">
+      取消活动
+      </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
+
