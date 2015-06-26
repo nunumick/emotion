@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		0B61104B72E4463E97E2A57F /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0229C69CF1A04489A18A1164 /* libsqlite3.0.dylib */; };
 		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
