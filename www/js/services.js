@@ -1,5 +1,11 @@
+/**
+ * author:nunumick@gmail.com
+ */
 angular.module('eMotion.services', [])
 
+/**
+ * service apis
+ */
 .factory('ApiService',function($http, $rootScope, $ionicLoading, $state, $timeout){
   var host = 'http://dip.taobao.net/mock/';
   var server = $rootScope.CustomDatas.host + '/';
